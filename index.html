@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMS Dokumentace - PJ Expedis</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary-blue: #00A7E1;
+            --secondary-blue: #0093c7;
+            --orange: #FF6B00;
+            --light-gray: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .header {
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: white;
+        }
+
+        .company-name {
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        .company-name .pj {
+            color: var(--orange);
+        }
+
+        .company-name .expedis {
+            color: var(--primary-blue);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 70px;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            overflow-y: auto;
+            background-color: var(--light-gray);
+            border-right: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .sidebar .nav-link {
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            padding-left: 20px;
+        }
+
+        .sidebar .nav-link.active {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .main-content {
+            margin-left: 300px;
+            margin-top: 70px;
+            padding: 30px;
+            max-width: 1200px;
+        }
+
+        .menu-item {
+           position: relative;
+        }
+
+        .menu-item .nav-link span {
+            transition: transform 0.3s ease;
+            font-size: 0.8em;
+        }
+
+        .menu-item .nav-link[aria-expanded="true"] span {
+            transform: rotate(180deg);
+        }
+
+        .submenu .nav-link {
+            padding-left: 30px;
+            font-size: 0.95em;
+        }
+
+        .submenu {
+            background-color: #f0f0f0;
+        }
+
+        .collapse {
+            transition: all 0.3s ease;
+        }
+
+        .markdown-content h1 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .markdown-content h2 {
+            color: var(--secondary-blue);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .markdown-content h3 {
+            color: #333;
+            margin-top: 1.5rem;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            margin: 1rem 0;
+            border-collapse: collapse;
+        }
+
+        .markdown-content table th,
+        .markdown-content table td {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .markdown-content table th {
+            background-color: var(--light-gray);
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid var(--primary-blue);
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: var(--light-gray);
+        }
+
+        .markdown-content code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .markdown-content hr {
+            margin: 2rem 0;
+            border-color: var(--border-color);
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: var(--light-gray);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: var(--primary-blue);
+            border-radius: 3px;
+        }
+
+        /* Vlastnosti pro obrázky na stránce */
+        .modal-thumbnail {
+            width: 900px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Nastavení maximální velikosti obrázku v modálním okně */
+        .modal-body img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 90vh; /* Maximální výška modálního okna */
+            margin: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Podmínky pro zobrazení na mobilních zařízeních */
+        @media (max-width: 768px) {
+                .sidebar {
+                    width: 100%;
+                    position: relative;
+                    top: 70px;
+                    height: auto;
+                }
+                
+                .main-content {
+                    margin-left: 0;
+                    margin-top: 70px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <span class="company-name">
+                    <span class="pj">PJ</span><span class="expedis">Expedis</span>
+                </span>
+                <span class="ms-3 text-muted">WMS Dokumentace</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <nav class="nav flex-column">
+            <a class="nav-link main-menu-item" href="#vseobecny-popis">Všeobecný popis</a>
+            <a class="nav-link main-menu-item" href="#sprava-uzivatelu">Správa uživatelů</a>
+            <a class="nav-link main-menu-item" href="#ciselniky">Číselníky</a>
+            <a class="nav-link main-menu-item" href="#materialy">Materiály</a>
+            
+            <div class="menu-item">
+                <a class="nav-link main-menu-item" href="#doklady" data-bs-toggle="collapse" data-bs-target="#dokladySubmenu">
+                    Doklady
+                    <span class="ms-auto">▼</span>
+                </a>
+                <div class="collapse submenu" id="dokladySubmenu">
+                    <a class="nav-link" href="#prijemky">Příjemky</a>
+                    <a class="nav-link" href="#objednavky">Objednávky</a>
+                    <a class="nav-link" href="#inventury">Inventury</a>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <a class="nav-link main-menu-item" href="#stav-skladu-main" data-bs-toggle="collapse" data-bs-target="#StavSkladuSubmenu">
+                    Stav skladu
+                    <span class="ms-auto">▼</span>
+                </a>
+                <div class="collapse submenu" id="StavSkladuSubmenu">
+                    <a class="nav-link" href="#stav-skladu">Stav Skladu</a>
+                    <a class="nav-link" href="#kontejnery">Kontejnery</a>
+                    <a class="nav-link" href="#replenish">Replenish</a>
+                </div>
+            </div>
+            <a class="nav-link main-menu-item" href="#skladove-joby">Skladové joby</a>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="markdown-content">
+            <div id="content">
+                <!-- Obsah bude dynamicky vkládán pomocí JavaScriptu -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modální okno pro zobrazení obrázků -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" alt="Detailní obrázek" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentDiv = document.getElementById('content');
+            const markdownCache = new Map();
+
+            // Funkce pro načtení a zpracování Markdown souboru
+            async function loadContent(section) {
+                try {
+                    if (markdownCache.has(section)) {
+                        contentDiv.innerHTML = markdownCache.get(section);
+                        setupScrollLinks();
+                        enableImageModal(); // Aktivuje modal pro obrázky
+                        return;
+                    }
+
+                    const response = await fetch(`content/${section}.md`);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const markdown = await response.text();
+                    const html = marked.parse(markdown);
+                    markdownCache.set(section, html);
+                    contentDiv.innerHTML = html;
+
+                    setupScrollLinks();
+                    enableImageModal(); // Aktivuje modal pro obrázky
+
+                    document.querySelectorAll('.markdown-content img').forEach(img => {
+                        img.classList.add('img-fluid');
+                    });
+                } catch (error) {
+                    console.error('Error loading content:', error);
+                    contentDiv.innerHTML = `<h1>Chyba při načítání obsahu</h1><p>Obsah se nepodařilo načíst: ${error.message}</p>`;
+                }
+            }
+
+            // Funkce pro otevření obrázku v modálním okně
+            function showImageInModal(src) {
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = src;
+                const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+                imageModal.show();
+            }
+            function showImage(imagePath) {
+                const modalImage = document.querySelector('#imageModal img');
+                modalImage.src = imagePath;
+            }
+
+            // Funkce pro aktivaci modálního okna pro všechny obrázky v Markdownu
+            function enableImageModal() {
+                const images = document.querySelectorAll('.markdown-content img');
+                images.forEach(img => {
+                    img.style.cursor = 'pointer';
+                    img.addEventListener('click', () => showImageInModal(img.src));
+                });
+            }
+
+            function setupScrollLinks() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
+                });
+            }
+
+            function handleMenuClick(e) {
+                e.preventDefault();
+                const href = e.target.getAttribute('href');
+                if (href) {
+                    const section = href.slice(1);
+                    window.location.hash = section;
+                }
+            }
+
+            document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+                link.addEventListener('click', handleMenuClick);
+            });
+
+            function handleHashChange() {
+                const hash = window.location.hash.slice(1) || 'vseobecny-popis';
+                loadContent(hash);
+                document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+                    const linkHash = link.getAttribute('href').slice(1);
+                    if (linkHash === hash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('hashchange', handleHashChange);
+            handleHashChange();
+        });
+    </script>
+
+<script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "-jdQ3PhIWCSbx8R2QRvfB",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="-jdQ3PhIWCSbx8R2QRvfB"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+</body>
+</html>
