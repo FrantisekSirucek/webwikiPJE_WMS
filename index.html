@@ -225,14 +225,46 @@
     </style>
 </head>
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Ověřit platnost tokenu
+            fetch('http://localhost:5000/api/protected', {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('username');
+                    window.location.href = 'login.html';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                localStorage.removeItem('token');
+                localStorage.removeItem('username');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
     <!-- Header -->
     <div class="header">
         <div class="container-fluid">
-            <div class="d-flex align-items-center">
-                <span class="company-name">
-                    <span class="pj">PJ</span><span class="expedis">Expedis</span>
-                </span>
-                <span class="ms-3 text-muted">WMS Dokumentace</span>
+            <div class="d-flex align-items-center justify-content-between">
+                <div>
+                    <span class="company-name">
+                        <span class="pj">PJ</span><span class="expedis">Expedis</span>
+                    </span>
+                    <span class="ms-3 text-muted">WMS Dokumentace</span>
+                </div>
+                <button onclick="logout()" class="btn btn-outline-danger btn-sm">Odhlásit se</button>
             </div>
         </div>
     </div>
@@ -303,7 +335,7 @@
                     if (markdownCache.has(section)) {
                         contentDiv.innerHTML = markdownCache.get(section);
                         setupScrollLinks();
-                        enableImageModal(); // Aktivuje modal pro obrázky
+                        enableImageModal();
                         return;
                     }
 
@@ -315,7 +347,7 @@
                     contentDiv.innerHTML = html;
 
                     setupScrollLinks();
-                    enableImageModal(); // Aktivuje modal pro obrázky
+                    enableImageModal();
 
                     document.querySelectorAll('.markdown-content img').forEach(img => {
                         img.classList.add('img-fluid');
@@ -325,6 +357,14 @@
                     contentDiv.innerHTML = `<h1>Chyba při načítání obsahu</h1><p>Obsah se nepodařilo načíst: ${error.message}</p>`;
                 }
             }
+        // Funkce pro odhlášení
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        }
+
+        
 
             // Funkce pro otevření obrázku v modálním okně
             function showImageInModal(src) {
@@ -391,17 +431,17 @@
         });
     </script>
 
-<script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "-jdQ3PhIWCSbx8R2QRvfB",
-    domain: "www.chatbase.co"
-    }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="-jdQ3PhIWCSbx8R2QRvfB"
-    domain="www.chatbase.co"
-    defer>
-    </script>
-</body>
+        <script>
+            window.embeddedChatbotConfig = {
+            chatbotId: "-jdQ3PhIWCSbx8R2QRvfB",
+            domain: "www.chatbase.co"
+            }
+            </script>
+            <script
+            src="https://www.chatbase.co/embed.min.js"
+            chatbotId="-jdQ3PhIWCSbx8R2QRvfB"
+            domain="www.chatbase.co"
+            defer>
+            </script>
+    </body>
 </html>

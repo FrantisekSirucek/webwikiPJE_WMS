@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ Expedis - WMS Dokumentace - Přihlášení</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #00A7E1;
+            --secondary-blue: #0093c7;
+            --orange: #FF6B00;
+        }
+
+        .login-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+
+        .login-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .company-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .company-name {
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        .company-name .pj {
+            color: var(--orange);
+        }
+
+        .company-name .expedis {
+            color: var(--primary-blue);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            border-color: var(--secondary-blue);
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="company-logo">
+                <span class="company-name">
+                    <span class="pj">PJ</span><span class="expedis">Expedis</span>
+                </span>
+                <p class="text-muted">WMS Dokumentace</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Uživatelské jméno</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Heslo</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Přihlásit</button>
+                </div>
+                <div id="errorMessage" class="error-message text-center">
+                    Nesprávné přihlašovací údaje
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Kontrola, zda je uživatel již přihlášen
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                // Ověřit platnost tokenu před přesměrováním
+                fetch('http://localhost:5000/api/protected', {
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'index.html';
+                    } else {
+                        // Token není platný, vymaže se
+                        localStorage.removeItem('token');
+                        localStorage.removeItem('username');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('username');
+                });
+            }
+        });
+    
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+    
+            fetch('http://localhost:5000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.token) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('username', data.username);
+                    window.location.href = 'index.html';
+                } else {
+                    errorMessage.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                errorMessage.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
