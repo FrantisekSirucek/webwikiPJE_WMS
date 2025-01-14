@@ -99,7 +99,7 @@
             const token = localStorage.getItem('token');
             if (token) {
                 // Ověřit platnost tokenu před přesměrováním
-                fetch('http://localhost:5000/api/protected', {
+                fetch('https://vocal-pie-c7334c.netlify.app/api/protected', {
                     headers: {
                         'Authorization': 'Bearer ' + token
                     }
@@ -127,7 +127,7 @@
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
     
-            fetch('http://localhost:5000/api/login', {
+            fetch('vocal-pie-c7334c.netlify.app/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

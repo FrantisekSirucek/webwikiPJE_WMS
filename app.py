@@ -97,4 +97,4 @@ def protected():
     return jsonify({'message': 'Tento endpoint je chráněný, přístup povolen'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=8080)
