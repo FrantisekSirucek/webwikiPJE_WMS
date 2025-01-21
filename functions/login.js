@@ -10,15 +10,14 @@ exports.handler = async (event, context) => {
 
     const { username, password } = JSON.parse(event.body);
 
-    // Pevně nastavené přihlašovací údaje
-    const validUsername = 'test';
-    const validPassword = 'test';
+    const validUsername = 'PJExpediswiki';
+    const validPassword = 'chcisetonaucit';
 
     if (username === validUsername && password === validPassword) {
         const token = jwt.sign(
             { username },
-            'PJExpedisSecretKey', // Tajný klíč pro token
-            { expiresIn: '1d' }   // Platnost tokenu
+            'PJExpedisWMS2024', // Tajný klíč
+            { expiresIn: '1d' } // Platnost tokenu 1 den
         );
 
         return {

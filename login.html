@@ -94,40 +94,12 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const token = localStorage.getItem('token');
-            if (token) {
-                fetch('https://vocal-pie-c7334c.netlify.app/api/protected', {
-                    headers: {
-                        'Authorization': 'Bearer ' + token
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        window.location.href = 'index.html';
-                    } else {
-                        localStorage.removeItem('token');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    localStorage.removeItem('token');
-                });
-            }
-        });
-
         document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
             const errorMessage = document.getElementById('errorMessage');
-
-            if (!username || !password) {
-                errorMessage.textContent = 'Vyplňte obě pole!';
-                errorMessage.style.display = 'block';
-                return;
-            }
 
             fetch('https://vocal-pie-c7334c.netlify.app/api/login', {
                 method: 'POST',
