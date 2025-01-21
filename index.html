@@ -225,37 +225,36 @@
     </style>
 </head>
 <body>
-    <!--
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const token = localStorage.getItem('token');
+    
             if (!token) {
                 window.location.href = 'login.html';
                 return;
             }
-
-            // Ověřit platnost tokenu
-            fetch('http://localhost:5000/api/protected', {
+    
+            // Volitelně: Ověřte token na serveru
+            fetch('/api/protected', {
                 headers: {
-                    'Authorization': 'Bearer ' + token
-                }
+                    'Authorization': `Bearer ${token}`,
+                },
             })
             .then(response => {
                 if (!response.ok) {
                     localStorage.removeItem('token');
-                    localStorage.removeItem('username');
                     window.location.href = 'login.html';
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 localStorage.removeItem('token');
-                localStorage.removeItem('username');
                 window.location.href = 'login.html';
             });
         });
-        -->
     </script>
+    
 
     <!-- Header -->
     <div class="header">
