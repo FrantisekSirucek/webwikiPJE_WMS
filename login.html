@@ -94,6 +94,11 @@
     </div>
 
     <script>
+        // Dynamické nastavení základní URL
+        const BASE_URL = window.location.hostname === 'localhost' 
+            ? 'http://localhost:8888/.netlify/functions' 
+            : 'https://vocal-pie-c7334c.netlify.app/api';
+
         document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -101,7 +106,8 @@
             const password = document.getElementById('password').value.trim();
             const errorMessage = document.getElementById('errorMessage');
 
-            fetch('https://vocal-pie-c7334c.netlify.app/api/login', {
+            // Přihlášení
+            fetch(`${BASE_URL}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -132,6 +138,7 @@
                 errorMessage.style.display = 'block';
             });
         });
+
     </script>
 </body>
 </html>

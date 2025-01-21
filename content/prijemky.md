@@ -32,7 +32,7 @@ Příjemka tak hraje zásadní roli při evidenci skladových zásob, sledován�
 `http://10.10.30.4:8080/modules/documents/goods-receipt/index`
 
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
-    <img src="/content/images/doklady/doklady-prijemky.png" alt="Příjem" width="900" />
+    <img src="/content/images/doklady/prijemky/doklady-prijemky.png" alt="Příjem" width="900" />
 </a>
 
 
@@ -55,7 +55,7 @@ Funkce:
 `http://10.10.30.4:8080/modules/documents/goods-receipt/lines`
 
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/radky-prijemky.png')">
-   <img src="/content/images/doklady/radky-prijemky.png" alt="Řádky příjemky" width="900" />
+   <img src="/content/images/doklady/prijemky/radky-prijemky.png" alt="Řádky příjemky" width="900" />
 </a>
 
 Tato obrazovka zobrazuje podrobný přehled jednotlivých řádků příjmových dokladů. Každý řádek reprezentuje konkrétní položku nebo materiál, který byl přijat do skladu.
