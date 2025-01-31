@@ -20,6 +20,8 @@ exports.handler = async (event, context) => {
             { expiresIn: '1d' } // Platnost tokenu 1 den
         );
 
+        console.log('Vygenerovaný token:', token);
+
         return {
             statusCode: 200,
             body: JSON.stringify({ token }),
