@@ -15,3 +15,20 @@
     "license": "MIT"
   }
   
+{
+    "name": "webwikiPJE_WMS",
+    "version": "1.0.0",
+    "description": "Single-page application for WMS documentation with login functionality",
+    "main": "index.html",
+    "scripts": {
+      "start": "netlify dev",
+      "build": "echo 'No build process needed'"
+    },
+    "dependencies": {
+      "jsonwebtoken": "^9.0.0"
+    },
+    "devDependencies": {},
+    "author": "Your Name",
+    "license": "MIT"
+  }
+  
