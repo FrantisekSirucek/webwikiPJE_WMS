@@ -1,0 +1,19 @@
+povolení scriptu na local 
+bash 
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+zakazani
+Set-ExecutionPolicy Restricted -Scope CurrentUser
+
+
+kontrola 
+Get-ExecutionPolicy -Scope CurrentUser
+
+
+inicializace netlify
+netlify init
+
+
+spuštění webu
+netlify dev
