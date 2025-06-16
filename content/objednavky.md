@@ -100,7 +100,13 @@ Importované objednávky jsou následně zpracovány stejně jako ostatní objed
 
 <h3 id="aktivace-objednavky">Aktivace objednávky</h3>
 
-Aktivace se provádí dvěma způsoby. Tlačítkem „Aktivovat aktivovatelné objednávky" – to způsobí, že všechny objednávky, které mají zelenou fajfku ve sloupci „Aktivovatelné?" se aktivují. Aktivací se k dokumentům vygenerují skladové joby.
+Aktivace se provádí dvěma způsoby. Tlačítkem „Aktivovat aktivovatelné objednávky" – to způsobí, že všechny objednávky, které mají zelenou fajfku ve sloupci „Aktivovatelné?" se aktivují. Aktivací se k dokumentům vygenerují skladové joby. Skladové joby se vytváři podle pickovacích zón (zóna je množina loakcí, které mají společné nastavení a předpoklad je, že jsou fyzicky v nějaké konkrétní oblasti skladu)
+Po aktivaci se vytvoří pickovací skladové joby podle následuících pravidel. 
+   WMS prohledá, zda se všechny položky nacházejí v jedné pickovací zóně.
+      Pokud ANO - vytvoří se 1 pickovací job 
+      Pokud NE - vytvoří se více skladových jobů po všech zónách, ze kterých je potřeba zboží vychystat. 
+   Následně se tedy na konci výdeje odešle do SAP každý job zvlášť což znamená, že co JOB ve WMS to Materiálový doklad v SAP 
+Dojde k vytištění skladových výdejek, které obsahují barcode, který se pak načte do čtečky. Opět platí co JOB to Výdejka. 
 
 **Hromadná aktivace**
 

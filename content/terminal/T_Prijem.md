@@ -1,4 +1,4 @@
-# 2/ Příjem
+# Příjem
 
 ## Obsah sekce "Příjem"
 1. [Příjem produktu na SN (+ UIID)](#prijem-produktu-na-sn--uiid)  
