@@ -1,6 +1,8 @@
-**To be done**
+1. [Průběh procesu výdeje](#vydej_terminalem)
+2. [Chyby a jejich řešení](#vydej_chyby)
 
-# Výdej
+
+<h2 id="vydej_terminalem">Průběh procesu výdeje</h2>
 
 Výdej pomocí čtečky probíhá tak, že se rozhodnu, zda chci vychystat jeden doklad, nebo chci vychystávat více jobů současně.  
 Podle toho si zvolím, jestli otevřu aplikaci **Pick** nebo **Multipick**.  
@@ -79,5 +81,21 @@ Když jsou všechny položky vypickované, čtečka nás vyzve k odložení mate
 
 Pokud všechno proběhlo v pořádku, systém nám zobrazí zelenou hlášku <strong><span style="color:rgb(39, 78, 2); background-color:rgb(186, 245, 131);">OK</span></strong> 
 
-**Známe hlášky, které může SAP v případě nějaké chyby vrátit a jejich řešení**
+<h2 id="vydej_chyby">Chyby a jejich řešení</h2>
+
+<span style="color: rgb(245, 173, 173); background-color rgb(252, 7, 7)">    SAP returned: Material 40840938 CZ03 3004 does not exist   </span>
+
+**Vysvětlení:** SAP říká, že daná kombinace materiálu a skladu neexistuje. Pravděpodobná příčina je, že v SAP je materiál na jiném účetním skladě nebo není vůbec. 
+**Možná náprava:** Upravit stav v SAPu, nebo vypickovat výdej znovu bez tohoto materiálu. 
+
+<span style="color: rgb(245, 173, 173); background-color rgb(252, 7, 7)">    	SAP returned: Enter batch (Original SAP message M7_018).In case of GI, ensure that all provided equipments exist. Non existent UIIs(limited by 100 entries):CZUI-CR9X363381-000000000040920091.   </span>
+
+**Vysvětlení:** SAP říká, že daná kombinace materiálu UDI neexistuje. Dané SN má nejspíš v SAP přiřazené jiné UID
+**Možná náprava:** Upravit stav v SAPu, UID na daném SN, nebo vypickovat jiné SN. - tato chyba by měla být vyřešena a už by se v budoucnu neměla opakovat
+
+
+<span style="color: rgb(245, 173, 173); background-color rgb(252, 7, 7)">    	SAP returned: Batch 47101035 CZ02 NEW does not exist   </span>
+
+**Vysvětlení:** SAP říká, že daná šarže daného materiálu není v SAP skladem
+**Možná náprava:** Naskladnit danou šarži do SAP nebo opravit šarži ve WMS a vypickovat Order znovu. 
 
