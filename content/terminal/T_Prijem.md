@@ -5,6 +5,7 @@
 2. [Příjem položky bez SN (UIID)](#prijem-polozky-bez-sn-uiid)  
 3. [Dokončení příjmu](#dokonceni-prijmu)  
 4. [Vytváření kontejnerů (Master Obalů)](#vytvareni-kontejneru-master-obalu)
+5. [Řešení problémů](#reseni-problemu) 
 
 ---
 
@@ -143,3 +144,5 @@ Buď **počtem** (produkty bez SN), nebo nascanováním **SN** (plus případně
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_prijemka.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_kontejner_prijemka.png" alt="Vložení ks do kontejneru" width="900" /> 
 </a>
+
+<h3 id="reseni-problemu">### Řešení Problémů<h3>
