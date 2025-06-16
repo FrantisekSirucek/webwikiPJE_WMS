@@ -83,18 +83,18 @@ Pokud všechno proběhlo v pořádku, systém nám zobrazí zelenou hlášku <st
 
 <h2 id="vydej_chyby">Chyby a jejich řešení</h2>
 
-<span style="background-color: rgb(245, 173, 173); color:rgb(252, 7, 7)">    SAP returned: Material 40840938 CZ03 3004 does not exist   </span>
+<span style="background-color: rgb(243, 198, 198); color:rgb(252, 7, 7)">    SAP returned: Material 40840938 CZ03 3004 does not exist   </span>
 
 **Vysvětlení:** SAP říká, že daná kombinace materiálu a skladu neexistuje. Pravděpodobná příčina je, že v SAP je materiál na jiném účetním skladě nebo není vůbec. 
 **Možná náprava:** Upravit stav v SAPu, nebo vypickovat výdej znovu bez tohoto materiálu. 
 
-<span style="background-color: rgb(245, 173, 173); background-color:rgb(252, 7, 7)">    	SAP returned: Enter batch (Original SAP message M7_018).In case of GI, ensure that all provided equipments exist. Non existent UIIs(limited by 100 entries):CZUI-CR9X363381-000000000040920091.   </span>
+<span style="background-color: rgb(243, 198, 198); color:rgb(252, 7, 7)">    	SAP returned: Enter batch (Original SAP message M7_018).In case of GI, ensure that all provided equipments exist. Non existent UIIs(limited by 100 entries):CZUI-CR9X363381-000000000040920091.   </span>
 
 **Vysvětlení:** SAP říká, že daná kombinace materiálu UDI neexistuje. Dané SN má nejspíš v SAP přiřazené jiné UID
 **Možná náprava:** Upravit stav v SAPu, UID na daném SN, nebo vypickovat jiné SN. - tato chyba by měla být vyřešena a už by se v budoucnu neměla opakovat
 
 
-<span style="background-color: rgb(245, 173, 173); background-color:rgb(252, 7, 7)">    	SAP returned: Batch 47101035 CZ02 NEW does not exist   </span>
+<span style="background-color: rgb(243, 198, 198); color:rgb(252, 7, 7)">    	SAP returned: Batch 47101035 CZ02 NEW does not exist   </span>
 
 **Vysvětlení:** SAP říká, že daná šarže daného materiálu není v SAP skladem
 **Možná náprava:** Naskladnit danou šarži do SAP nebo opravit šarži ve WMS a vypickovat Order znovu. 
