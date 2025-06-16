@@ -27,4 +27,4 @@ Nebo si uživatel může nechat nějaký pick přiřadit pomocí modrého tlač�
 </a>
 
 V případě **Pick** aplikace po načtení dokladu rovnou jdeme na obrazovku prvního picku
-U **Multipick** zezelanají načtené joby a dokud nemám vybrané všechny co chci pokračuji v načítání. Až jsem spokojený, tak kliknu na zelené tlačítko <span style="backround-color:rgb(3, 201, 3) color:rgb(248, 252, 249);"> **Začít**</span>
+U **Multipick** zezelanají načtené joby a dokud nemám vybrané všechny co chci pokračuji v načítání. Až jsem spokojený, tak kliknu na <span style="color: white; background-color: green;">zelené</span> tlačítko <span style="backround-color:rgb(3, 201, 3) color:rgb(248, 252, 249);"> **Začít**</span>
