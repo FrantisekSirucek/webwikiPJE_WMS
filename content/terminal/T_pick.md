@@ -41,16 +41,20 @@ U **Multipick** zezelenají načtené joby a dokud nemám vybrané všechny, co 
 Po úspěšném ověření lokace musíme ověřit, že bereme správný produkt.
 
 Pokud produkt má SN (UIID), tak nás čtečka rovnou vyzve k načtení SN/UIID. 
+
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/terminal/images/Pick/pick_scan_SN.png" alt="NačtiJoby" width="900" />
 </a>
 
 Pokud pickujeme produkt, který se neeviduje na sériová čísla, tedy kusovku nebo kabel, nejprve nás čtečka vyzve k načtení produktového kódu jako ověření, že máme správný produkt. 
+
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/terminal/images/Pick/pick_overeni_nonsn.png" alt="NačtiJoby" width="900" />
 </a>
 
 Následně nás vyzve k zadání počtu kusů v případě kusovky. Je potřeba zadat přesně ten počet, který máme z dané lokace vzít. Čtečka nás nepustí vzít více nebo méně. V případě, že zadáme méně kusů, nebo klikneme na tlačítko <span style="color:red;">SHORTPICK</span>, systému tím řekneme, že produkt na lokaci není nebo je ho málo. V takovém případě se systém pokusí najít náhradní lokaci a zařadit ji do picku. Nebo se dokončí pick bez tohoto a uživatel bude na konci upozorněn, že to má před odesláním do SAP vyřešit. 
+
+<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/terminal/images/Pick/pick_zadej_pocet.png" alt="NačtiJoby" width="900" />
 </a>
 
@@ -61,12 +65,14 @@ V případě MCFE - kabelů - produktů nás čtečka vyzve k načtení cívky (
 
 Následně se spustí aplikace přešaržování (stříhání) kabelů, kde je ve vrchní části předvyplněno, kolik metrů mám odebrat a případně zadám průměr bubnu, na který dané množství namotám.  
 Ve spodní části vidím, kolik metrů a na jakém bubnu zbyde. V případě potřeby může některé údaje změnit. 
+
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/terminal/images/Pick/pick_vydej_mcfe_strih.png" alt="NačtiJoby" width="900" />
 </a>
 
 Tím je dokončen pick jedné položky jobu a pokračujeme stejným procesem pickovat všechny zbývající položky.  
 Když jsou všechny položky vypickované, čtečka nás vyzve k odložení materiálů na lokaci výdeje a k jejímu načtení. 
+
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/terminal/images/Pick/pick_konec_scan_vydej.png" alt="NačtiJoby" width="900" />
 </a>
