@@ -77,8 +77,7 @@ Po načtení SN je uživatel vyzván k zadání UIID pro produkt:
 Pokud během načítání dojde k chybě (např. nesprávný formát sériového čísla), systém zobrazí červené varování v horní části obrazovky. Uživatel je informován o typu chyby a může opravit zadání.
 ---
 
-### Příjem položky bez SN (UIID)
-*(anchor: `#prijem-polozky-bez-sn-uiid`)*
+<h3 id="prijem-polozky-bez-sn-uiid">Příjem položky bez SN</h3>
 
 V případě, že materiál **není** evidovaný na SN, tak místo obrazovek na načítání SN (UIID) se zobrazí pouze obrazovka, kam se zadá počet ks k přijetí.
 
@@ -96,8 +95,7 @@ A nebo celé množství. **Nikdy nejde přijmout víc**, než je na řádku polo
 
 ---
 
-### Dokončení příjmu
-*(anchor: `#dokonceni-prijmu`)*
+<h3 id="dokonceni-prijmu">Dokončení příjmu</h3>
 
 Po dokončení příjmu řádky se zobrazí potvrzovací obrazovka a výzva k načtení tiskárny pro vytištění potvrzovacího lístku. Nebo je zde možnost tisk vynechat.
 
@@ -119,8 +117,7 @@ Kliknutím na **Hotovo** dokončím práci a zobrazí se mi tento dialog. Zde zv
 
 ---
 
-### Vytváření kontejnerů (Master Obalů)
-*(anchor: `#vytvareni-kontejneru-master-obalu`)*
+<h3 id="vytvareni-kontejneru-master-obalu">Vytváření kontejnerů (Master Obalů)</h3>
 
 V případě, že chci už při **příjmu** vytvořit kontejner, tak zvolím tlačítko (na obrazovce zadání počtu nebo skenování SN).
 
