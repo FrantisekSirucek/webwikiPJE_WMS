@@ -143,6 +143,8 @@ Buď **počtem** (produkty bez SN), nebo nascanováním **SN** (plus případně
 
 <h3 id="reseni-problemu">Řešení Problémů</h3>
 
+---
+
 **Oprava nascanovaného SN** 
 Pokud jsem načetl špatně SN z produktu, mohu ho ještě **před dokončením příjemky** změnit. A to přes detail dokladu.
 1. Otevřu si detail příjemky, kde potřebuji změnit SN
@@ -156,3 +158,7 @@ obrazek
 3. Otevře se mi seznam všech přijatých SN. Najdu to které potřebuji opravit a kliknu na něj. Otevře se mi nové okno, kde mohu SN přepsat a uložit. Tím se SN změní a do SAP bude odesláno to opravené. 
 
 obrazek
+
+**Vrácení příjmu**
+V případě velké chyby při přijmu lze doklad vrátit do původního stavu. Pomocí tlačítaka vrátit příjem se smažou všechna přijatá data a příjemka lze zpracovat znovu a správně. 
+Vrátit příjem nelze, pokud už na dokladu došlo k potvrzení nějakého jobu. 
