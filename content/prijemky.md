@@ -11,7 +11,7 @@
     - [Dokončená příjemka](#dokoncena-prijemka)
     - [Import příjemky ze SAP](#import-prijemky-ze-sap)
     - [Založení interní příjemky mimo SAP](#zalozeni-interni-prijemky-mimo-sap)
-   - [Další informace a řešení problémů](#reseni-problemu)
+2. [Další informace a řešení problémů](#reseni-problemu)
 
 <h2 id="prijem">Příjem</h2>
 
