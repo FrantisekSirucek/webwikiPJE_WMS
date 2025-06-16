@@ -145,8 +145,9 @@ Buď **počtem** (produkty bez SN), nebo nascanováním **SN** (plus případně
     <img src="/content/terminal/images/prijem_prijemka_kontejner_prijemka.png" alt="Vložení ks do kontejneru" width="900" /> 
 </a>
 
-<h3 id="reseni-problemu">### Řešení Problémů<h3>
+<h3 id="reseni-problemu">Řešení Problémů<h3>
 
+<a>
 **Změna přijatého SN**
 Pokud jsem načetl špatně SN z produktu, mohu ho ještě **před dokončením příjemky** změnit. A to přes detail dokladu.
 1. Otevřu si detail příjemky, kde potřebuji změnit SN
@@ -160,3 +161,4 @@ obrazek
 3. Otevře se mi seznam všech přijatých SN. Najdu to které potřebuji opravit a kliknu na něj. Otevře se mi nové okno, kde mohu SN přepsat a uložit. Tím se SN změní a do SAP bude odesláno to opravené. 
 
 obrazek
+</a>
