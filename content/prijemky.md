@@ -11,9 +11,7 @@
     - [Dokončená příjemka](#dokoncena-prijemka)
     - [Import příjemky ze SAP](#import-prijemky-ze-sap)
     - [Založení interní příjemky mimo SAP](#zalozeni-interni-prijemky-mimo-sap)
-   -[Další informace a řešení problémů](#reseni-problemu)
-   -  [Import příjemky ze SAP](#import-prijemky)
-   -  [Vytvoření interní příjemky](#vytvor-interni-prijemku)
+   - [Další informace a řešení problémů](#reseni-problemu)
 
 <h2 id="prijem">Příjem</h2>
 
@@ -209,44 +207,13 @@ Tlačítka:
 
 Interní WMS příjemky by měly být používány výhradně pro příjem materiálu, který není evidován v SAP. Příjem materiálu, který je součástí systému SAP, pomocí této funkce je zakázán, protože by to vedlo k nekonzistenci dat mezi systémy WMS a SAP.
 
-Interní příjemky jsou často využívány pro testování, zpracování neformálního příjmu materiálu nebo pro evidenci materiálu, který není součástí hlavního systému ERP.
+Interní příjemky jsou často využívány pro testování, zpracování neformálního příjmu materiálu nebo pro evidenci materiálu, který není součástí hlavního systému ERP. Případně k doskladnění materiálu, který je v SAP a nelze tedy do SAP přijmout opakovaně
 
 > **Důležité upozornění:** Jakýkoliv pokus o přijetí materiálu, který je zároveň spravován v SAPu, způsobí závažné problémy s datovou konzistencí a správností skladových zásob mezi systémy!
 
 ---
 
 <h2 id="reseni-problemu">Další informace a Řešení Problémů</h2>
-
-   <h3 id=import-prijemky>Import příjemky ze SAP</h3>
-   Importovat ze SAP lze příjmeku, která ještě ve WMS vůbec není, nebo je ale je ve stavu dokončeno.
-   Na hlavní obrazovce kliknu na "Importovat ze SAP"
-   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
-    <img src="/content/images/doklady/prijemky/doklady-prijemky.png" alt="Příjem" width="900" />
-</a>
-
-   Zobrazí se mi následující dialog, kam do pole ID vyplním číslo/čísla příjemek, které potřebuji naimportovat ze SAP do WMS
-   Úspěšný import bude potvrzen zelenou hláškou. V případě chyby se zobrazí červená hláška a popis chyby (nejčastější problém je, že už je příjemka naimportovaná a nedokončená)
-
-   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
-    <img src="/content/images/doklady/prijemky/import-prijemky.png" alt="Příjem" width="900" />
-</a>
-
-   <h3 id=vytvor-interni-prijemku>Vytvoření interní příjemky</h3>
-   V příápadě, že potřebuji do WMS naskladnit produkty mimo evidenci SAP. Například chci ve WMS evidovat něco co se v SAP neeviduje, nebo potřebuji do WMS dostat produkty, které už v SAP jsou ale do WMS se nedostali. Tak jedna z cest je vytvoření interní příjemky.
-   Interní příjemky lze ale vytvářet pouze na jednu položku. Nelze touto cestou vytvářet více položkové příjemky a tedy není tento proces vhodný na naskladňování více různých produktů. 
-
-   V modulu Příjemky kliknu na tlačítko Vytvořit
-   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
-    <img src="/content/images/doklady/prijemky/doklady-prijemky.png" alt="Příjem" width="900" />
-</a>
-
-   Zobrazí se mi dialog, kde vyberu účetní sklad na který má položka mířit, SAPové číslo položky v plném formátu (tedy i se všemi 0 na začátku) a počet kusů. 
-
-   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
-    <img src="/content/images/doklady/prijemky/zalozeni-interni-prijemky.png" alt="Příjem" width="900" />
-</a>
-
-   Potém potvrdím stiskem OK a rovnou se mi otevře detail nově založené příjemky a můžu s ní dál pracovat 
 
 **Opakované přijímání na stejný již dokončený doklad**
 Pokud se potřebuji vrátit k Příjemkce, kterou jsem již z WMS odeslal do SAP. Tak jediný správný způsobej je doklad znovu naimportovat
@@ -268,3 +235,5 @@ obrazek
 **Vrácení příjmu**
 V případě velké chyby při přijmu lze doklad vrátit do původního stavu. Pomocí tlačítaka vrátit příjem se smažou všechna přijatá data a příjemka lze zpracovat znovu a správně. 
 Vrátit příjem nelze, pokud už na dokladu došlo k potvrzení nějakého jobu. 
+
+---
