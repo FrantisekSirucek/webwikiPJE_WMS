@@ -100,6 +100,10 @@ A poté bude potřeba nascanovat všechna SN, která jsem vzal a chci přesunout
 </a>
 
 
+A pokud jsem udělal všechno správně dostanu zelené potvrzení a je hotovo
 
-**To be done**
+<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
+    <img src="/content/terminal/images/Preskladneni/OK.png" alt="Přeskladnění" width="900" />
+</a>
+
 
