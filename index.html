@@ -498,32 +498,6 @@
                 });
             }
 
-            <!--
-                This script manages navigation and smooth scrolling behavior for a sidebar menu and in-page markdown links.
-
-                Functions:
-                1. handleMenuClick(e):
-                    - Handles clicks on sidebar navigation links.
-                    - Prevents default link behavior.
-                    - Updates the window location hash to the selected section.
-
-                2. Event Listener Setup:
-                    - Adds 'click' event listeners to all sidebar navigation links with the class '.nav-link'.
-
-                3. handleHashChange():
-                    - Handles changes to the window location hash.
-                    - Loads content for the current hash section (defaulting to 'vseobecny-popis' if none).
-                    - Updates the 'active' class on sidebar navigation links to reflect the current section.
-
-                4. setupMarkdownLinks():
-                    - Adds 'click' event listeners to all anchor links within elements with the class '.markdown-content' that reference in-page anchors (href starting with '#').
-                    - If the target element exists on the page, smoothly scrolls to it.
-                    - If the target does not exist, updates the window location hash to trigger content/module switching.
-
-                Usage:
-                - Ensures sidebar navigation and in-page anchor links provide a smooth and intuitive navigation experience.
-                - Keeps the active state of navigation links in sync with the current section.
-            -->
             function handleMenuClick(e) {
                 e.preventDefault();
                 const href = e.target.getAttribute('href');
