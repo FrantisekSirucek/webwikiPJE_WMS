@@ -1,3 +1,36 @@
+<!--
+    index.html - WMS Studnice vědomostí - PJ Expedis
+
+    Description:
+    This is the main HTML file for the internal WMS Wiki application for PJ Expedis.
+    It provides a responsive, Bootstrap-based UI with a fixed header, sidebar navigation,
+    and dynamic main content area. Content is loaded from Markdown files and rendered
+    using Marked.js. The application includes authentication via JWT token, image modal
+    viewing, and smooth navigation between documentation sections.
+
+    Main Features:
+    - Responsive layout with fixed header and sidebar navigation.
+    - Dynamic loading and rendering of Markdown documentation files.
+    - Token-based authentication; redirects to login if token is missing or invalid.
+    - Sidebar menu with collapsible submenus for structured navigation.
+    - Modal image viewer for images within documentation.
+    - Smooth scrolling and hash-based navigation for deep linking.
+    - Custom styles for improved readability and branding.
+    - Embedded external chatbot for user support.
+
+    Technologies Used:
+    - HTML5, CSS3 (with custom properties)
+    - Bootstrap 5 (CDN)
+    - Marked.js for Markdown parsing (CDN)
+    - JavaScript (ES6+)
+    - Chatbase chatbot integration
+
+    Author: František Sirůček
+    Organization: PJ Expedis
+    Last updated: 2025
+
+   
+-->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -226,6 +259,24 @@
 </head>
 <body>
 
+    <!--
+        This script manages authentication and token validation for the web application.
+
+        Features:
+        - Sets the BASE_URL depending on whether the app is running locally or in production.
+        - On DOMContentLoaded:
+            - Retrieves the authentication token from localStorage.
+            - If no token is found, redirects the user to 'login.html'.
+            - If a token exists, sends a request to the '/protected' endpoint to validate the token.
+                - If validation fails, removes the token and redirects to 'login.html'.
+                - If validation succeeds, logs the verification result.
+            - Handles errors during the fetch process by removing the token and redirecting to 'login.html'.
+        - Provides a logout() function to clear authentication data from localStorage and redirect to 'login.html'.
+
+        Usage:
+        - Include this script in pages that require user authentication.
+        - Call logout() to log the user out and redirect to the login page.
+    -->
     <script>
         const BASE_URL = window.location.hostname === 'localhost' 
             ? 'http://localhost:8888/.netlify/functions' 
@@ -447,6 +498,32 @@
                 });
             }
 
+            <!--
+                This script manages navigation and smooth scrolling behavior for a sidebar menu and in-page markdown links.
+
+                Functions:
+                1. handleMenuClick(e):
+                    - Handles clicks on sidebar navigation links.
+                    - Prevents default link behavior.
+                    - Updates the window location hash to the selected section.
+
+                2. Event Listener Setup:
+                    - Adds 'click' event listeners to all sidebar navigation links with the class '.nav-link'.
+
+                3. handleHashChange():
+                    - Handles changes to the window location hash.
+                    - Loads content for the current hash section (defaulting to 'vseobecny-popis' if none).
+                    - Updates the 'active' class on sidebar navigation links to reflect the current section.
+
+                4. setupMarkdownLinks():
+                    - Adds 'click' event listeners to all anchor links within elements with the class '.markdown-content' that reference in-page anchors (href starting with '#').
+                    - If the target element exists on the page, smoothly scrolls to it.
+                    - If the target does not exist, updates the window location hash to trigger content/module switching.
+
+                Usage:
+                - Ensures sidebar navigation and in-page anchor links provide a smooth and intuitive navigation experience.
+                - Keeps the active state of navigation links in sync with the current section.
+            -->
             function handleMenuClick(e) {
                 e.preventDefault();
                 const href = e.target.getAttribute('href');
