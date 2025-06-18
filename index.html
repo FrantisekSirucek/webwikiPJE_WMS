@@ -473,15 +473,26 @@
                 });
             }
 
-            function setupMarkdownLinks() {
-                document.querySelectorAll('.markdown-content a[href^="#"]').forEach(link => {
-                    link.addEventListener('click', function (e) {
+                    function setupMarkdownLinks() {
+            document.querySelectorAll('.markdown-content a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const hash = this.getAttribute('href').substring(1);
+
+                    // Zjistit, jestli existuje element s tímto ID na stránce
+                    const target = document.getElementById(hash);
+
+                    if (target) {
+                        // Lokální kotva → scrolluj plynule
                         e.preventDefault();
-                        const hash = this.getAttribute('href').substring(1);
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        // Není na stránce → pravděpodobně přepnutí modulu
+                        e.preventDefault();
                         window.location.hash = hash;
-                    });
+                    }
                 });
-            }
+            });
+        }
 
 
             window.addEventListener('hashchange', handleHashChange);
