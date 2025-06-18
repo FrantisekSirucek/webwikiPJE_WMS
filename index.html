@@ -381,6 +381,7 @@
                         contentDiv.innerHTML = markdownCache.get(section);
                         setupScrollLinks();
                         enableImageModal();
+                        setupMarkdownLinks();
                         return;
                     }
 
@@ -393,6 +394,7 @@
 
                     setupScrollLinks();
                     enableImageModal();
+                    setupMarkdownLinks();
 
                     document.querySelectorAll('.markdown-content img').forEach(img => {
                         img.classList.add('img-fluid');
@@ -470,6 +472,17 @@
                     }
                 });
             }
+
+            function setupMarkdownLinks() {
+                document.querySelectorAll('.markdown-content a[href^="#"]').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const hash = this.getAttribute('href').substring(1);
+                        window.location.hash = hash;
+                    });
+                });
+            }
+
 
             window.addEventListener('hashchange', handleHashChange);
             handleHashChange();
