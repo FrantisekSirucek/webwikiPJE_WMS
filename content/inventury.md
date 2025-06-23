@@ -1,5 +1,6 @@
 1. [Inventury](#inventury)
     - [Doklady inventur](#doklady-inventur)
+    - [Detail dokladu inventury a jeho zpracování](#detail-inventury)
     - [Řádky inventárních dokladů](#radky-inventarnich-dokladu)
 2. [Short picky](#short-picky)
 
@@ -50,6 +51,50 @@ Sloupce:
 - **Rozdíl:** Rozdíl mezi nalezeným a očekávaným počtem kusů (pozitivní hodnota značí nadbytek, negativní nedostatek).
 - **Aktuální:** Počet, který je aktuálně potvrzený nebo opravený po inventuře.
 - **Opraveno:** Informace o tom, kolik jednotek bylo opraveno (pokud byl nalezen rozdíl, který byl následně opraven).
+
+
+<h2 id=detail-inventury>Detal dokladu inventury - zpracování inventury</h2>
+U každé inventury je potřeba po fyzickém sečtené ještě provést kontrolu a schválení všech inventárních dokladů. Jedna inventarizovaná lokace = jeden inventární doklad. Každý doklad je po jeho dokončení v aplikace ještě potřeba zkontrolovat a schválit nebo odmítnuot. 
+
+Doklad, který je připravený ke zpracování po svém otevření vypadá takto
+
+V horní části jsou tlačítka pro <span style="background-color: green; color:white">Schválit</span> celý doklad nebo <span style="background-color: red; color:white">Odmítnout</span> celý doklad. Použitím jednoho z těchto tlačítek provedu akci nad všemi řádky dokladu. Pokud jsem si jistý, že doklad je v pořádku. Tak přesně pro tuto chvíli tlačítka slouží. 
+
+Pod nimi je tabulka s obecnými informacemi o dokladu. Kde vidím v jaké stavu doklad je, kdy to bylo provedeno, kdo to provedl a na jaké lokaci byl doklad vytvořený.
+
+To nejdůležitější je spodní tabulka, kde jsou jednotlivé řádky, které mi říkají jestli byl na lokaci nalezen nějaký rozdíl nebo ne. A zároveň na otevřeném dokladu mám možnost říct, co se má stát s jednotlivými řádky. 
+
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
+   <img src="/content/images/doklady/inventury/inventura_detail_dokladu.png" alt="Řádky inventárních dokladů" width="900" />
+</a>
+
+Zde se tedy zastavíme a popíšemé si jednotlivé sloupce této části dokladu. 
+- první 4 sloupce identifikují produkt. Tedy jeho PN, SAP PN, název a Výr PN (pokud je známé). Zároveň slouží jako proklik na kartu produktu. 
+- **Batch** zobrazuje šarži produktu na lokačním záznamu. (obvykle "prázdné", NEW, USED a nebo nějaká číselná šarže)
+  <span style="color: orange;">⚠️</span> pokud by produk byl na lokaci ve více šaržích, je pro každou šarži vlastní lokační záznam. 
+- **Nalezeno** zobrazuje poček kusů, které zadal pracovník do aplikace pry fyzickém počítání
+- **SN** - tbd
+- **Očekáváno** zobrazuje počet kusů, které původně systém na lokaci očekával
+- **Rozdíl** zobrazuje rozdíl mezi tím co bylo napočítáno a tím co původně systém očekával
+- **Aktuální** zobrazuje počet kusů, které jsou na lokaci v tuto chvíli, kdy si prohlížím doklad. Obvykle bude stejný. Ale pokud by například mezi zpracování inventury a prohlížením dokladu došlo k nějakým pohybům. Pick nebo třeba schválení jiné inventury. Bude počet odlišný a může mi napovědět například to, jestli náhodou nebyla na lokaci provedena inventura 2x atp.
+- **Opraveno** zobrazuje počet kusů, který bude na lokaci po schválení dokladu/řádku. <span style="color: red;">❗</span> pokud bude tento sloupec ukazovat zápornou hodnotu, nepůjde tento řádek schválit. Protože nelze mít záporný stav na lokaci. V takovém případě je vždy nutné nejdříve odmítnout tento řádek a pak teprve schválit doklad (bez této diference). Může to být důvod proč schválení celého dokladu končí chybou. Zároveň to může indikovat, že inventura nebyla provedena korektně nebo byla provedena duplicitní inventura. A admin by měl lokaci raději znovu přepočítat nebo nechat přepočítat. 
+- **Akce** - umožňuje schválit nebo odmítnout konkrétní řádek. 
+
+Jednotlivé řádky jsou pak také barevně odlišené pro rychlejší orientaci. Nulové diference jsou bez podbarvení. V případě kladné diference jsou podbarvené <span style="background-color: rgb(241, 174, 87); color:black">žlutě</span>. A záporné diference jsou podbarvené <span style="background-color: rgb(243, 101, 101); color:black">červně</span>
+
+V případě, že otevřu doklad, který ještě nebyl v aplikaci dokončený bude horní část vypadat takto. Tlačítkem <span style="background-color: rgb(240, 217, 11); color:black">Dokončit doklad</span> mohu doklad dokončit. Ale měl bych to udělat jen v případě, kdy jsem si jistý, že už na něm pracovník nepracuje. V opačném případě mu spadne zpracování a bude potřeba inventuru udělat znova. 
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
+   <img src="/content/images/doklady/inventury/inventura_rozpracovany_doklad.png" alt="Řádky inventárních dokladů" width="900" />
+</a>
+
+<h4>Scénář klasická inventura</h4>
+Pokud schvaluji klasickou inventuru, obvykle schvaluji celé doklady a neřeším jednotlivé diference. I tak bych ale před samotným schválením měl na dokladu zkontrolovat, zda tam není záporný stav po opravě <span style="color: orange;">⚠️</span> v takovém případě stejně schválení skončí chybou <span style="color: orange;">⚠️</span>. V případě, že dělám inventuru při uzavřeném skladu, bych také měl zkontrolovat zda sloupce **Očekáváno** a **Aktuální** jsou stejné a zda náhodou nemám duplicitní doklad, který mi pracovník provádějící inventuru zapomněl nahlásit. 
+
+<h4>Scénář opravy lokace<h4>
+Pokud dělám inventuru z důvodu, že potřebuji upravit konkértní produkt (dohledaná diference, oprava šarže nebo účetního skladu atp...) je možné aplikací provést inventuru jen konkrétního produktu. 
+Při schvalování pak najdu tento konkrétní řádek, který přijmu. Celý doklad pak ale odmítnu, protože ostatní neinventarizované produkty na lokaci budou mít záporné diference. 
+
+
 
 <h2 id="short-picky">Short picky</h2>
 

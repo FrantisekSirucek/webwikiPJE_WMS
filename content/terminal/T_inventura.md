@@ -83,6 +83,8 @@ A po potvrzení už uvidím, že celkový počet klesl o 100ks a již ukazuje sp
 <h2 id="inventuraSN">Inventura seriových čísel</h2>
 
 
+
+
 ---
 [Zpět na začátek](#main)
 
