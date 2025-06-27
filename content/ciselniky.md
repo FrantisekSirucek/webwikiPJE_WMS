@@ -30,9 +30,7 @@ Tato obrazovka zobrazuje přehled všech účetních skladů. Každý sklad je z
 - **Nový účetní sklad**: Tlačítko v horní části obrazovky slouží k přidání nového skladu.
 - **Další možnosti**: V dolní části je k dispozici nastavení počtu zobrazených položek na stránce (10, 50, 100).
 
-<a href="#cisleniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady.png')">
-    <img src="/content/images/ciselniky/ucetni-sklady.png" alt="Účetní sklady" width="900" />
-</a>
+!["Ucetni sklady](/content/images/ciselniky/ucetni-sklady.png)
 
 <p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 

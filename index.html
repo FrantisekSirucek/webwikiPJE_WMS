@@ -393,11 +393,11 @@
             </div>
 
             <div class="menu-item">
-                <a class="nav-link main-menu-item" href="#terminal/obecny" data-bs-toggle="collapse" data-bs-target="#TerminalSubmenu">
-                    Čtečky
+                <a class="nav-link main-menu-item" href="#terminal/obecny" data-bs-toggle="collapse" data-bs-target="#ManualySubmenu">
+                    Obecné manuály
                     <span class="ms-auto">▼</span>
                 </a>
-                <div class="collapse submenu" id="TerminalSubmenu">
+                <div class="collapse submenu" id="ManualySubmenu">
                     <a class="nav-link" href="#manualy/M_Preskladneni_out">Přeskladnění mimo sklad</a>
                 </div>
             </div>
@@ -420,7 +420,7 @@
 
     <!-- Modální okno pro zobrazení obrázků -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <img id="modalImage" src="" alt="Detailní obrázek" class="w-100">
@@ -488,10 +488,11 @@
 
             // Funkce pro aktivaci modálního okna pro všechny obrázky v Markdownu
             function enableImageModal() {
-                const images = document.querySelectorAll('.markdown-content img');
-                images.forEach(img => {
-                    img.style.cursor = 'pointer';
-                    img.addEventListener('click', () => showImageInModal(img.src));
+                document.querySelectorAll('.markdown-content img').forEach(img => {
+                    img.style.cursor = 'pointer';                 // ukazatel „ručička“
+                    img.addEventListener('click', () =>           // po kliknutí
+                        showImageInModal(img.src)                 // otevřeme modal
+                    );
                 });
             }
 
