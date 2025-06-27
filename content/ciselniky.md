@@ -30,11 +30,11 @@ Tato obrazovka zobrazuje přehled všech účetních skladů. Každý sklad je z
 - **Nový účetní sklad**: Tlačítko v horní části obrazovky slouží k přidání nového skladu.
 - **Další možnosti**: V dolní části je k dispozici nastavení počtu zobrazených položek na stránce (10, 50, 100).
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady.png')">
+<a href="#cisleniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady.png')">
     <img src="/content/images/ciselniky/ucetni-sklady.png" alt="Účetní sklady" width="900" />
 </a>
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -48,17 +48,17 @@ Po prokliku na jakýkoliv sklad z přehledu se zobrazí jeho detail.
 - **Externí kód**: Externí identifikátor skladu.
 - **Upravit sklad**: Tlačítko pro přechod do editačního režimu pro úpravu detailů skladu.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady-detail.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady-detail.png')">
     <img src="/content/images/ciselniky/ucetni-sklady-detail.png" alt="Účetní sklady detail" width="900" />
 </a>
 
 Obrazovka editace účetního skladu:
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady-editace.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/ucetni-sklady-editace.png')">
     <img src="/content/images/ciselniky/ucetni-sklady-editace.png" alt="Fyzické sklady" width="900" />
 </a>
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -75,17 +75,17 @@ Fyzický sklad představuje konkrétní fyzickou lokalitu, jako je plocha nebo h
 - **Upravit**: Tlačítko pro přechod na obrazovku pro úpravu informací o konkrétním skladu.
 - **Nový fyzický sklad**: Tlačítko v horní části obrazovky umožňuje přidání nového fyzického skladu.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/fyzicke-sklady.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/fyzicke-sklady.png')">
     <img src="/content/images/ciselniky/fyzicke-sklady.png" alt="Fyzické sklady" width="900" />
 </a>
 
 Obrazovka založení/editace
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/fyzicke-sklady-editace.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/fyzicke-sklady-editace.png')">
     <img src="/content/images/ciselniky/fyzicke-sklady-editace.png" alt="Fyzické sklady" width="900" />
 </a>
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -99,11 +99,11 @@ Po kliknutí na název skladu se zobrazí detailní informace o vybraném fyzick
 - **Externí kód**: Kód používaný pro externí systémy.
 - **Upravit**: Tlačítko pro přechod do režimu editace detailů skladu.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/fyzicke-sklady-detail.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/fyzicke-sklady-detail.png')">
     <img src="/content/images/ciselniky/fyzicke-sklady-detail.png" alt="Fyzické sklady" width="900" />
 </a>
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -113,7 +113,7 @@ Po kliknutí na název skladu se zobrazí detailní informace o vybraném fyzick
 
 Zóny jsou skupiny skladových lokací, které sdílejí společné vlastnosti nastavení.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/zony.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/zony.png')">
     <img src="/content/images/ciselniky/zony.png" alt="Zóny" width="900" />
 </a>
 
@@ -128,7 +128,7 @@ Zóny jsou skupiny skladových lokací, které sdílejí společné vlastnosti n
 
 
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -136,7 +136,7 @@ Zóny jsou skupiny skladových lokací, které sdílejí společné vlastnosti n
 
 Tato obrazovka umožňuje upravit informace o zóně.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/zony-editace.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/zony-editace.png')">
     <img src="/content/images/ciselniky/zony-editace.png" alt="Zóny" width="900" />
 </a>
 
@@ -147,7 +147,7 @@ Tato obrazovka umožňuje upravit informace o zóně.
 - **Active**: Checkbox označující, zda je zóna aktivní.
 - **OK**: Tlačítko pro potvrzení změn.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -155,7 +155,7 @@ Tato obrazovka umožňuje upravit informace o zóně.
 
 Po kliknutí na název zóny se zobrazí její detailní informace.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/zony-detail.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/zony-detail.png')">
     <img src="/content/images/ciselniky/zony-detail.png" alt="Zóny Detail" width="900" />
 </a>
 
@@ -173,7 +173,7 @@ Detail zóny poskytuje podrobné informace o konkrétní zóně, včetně sklado
 
 Editace zóny umožňuje upravit veškeré údaje týkající se zóny, včetně přiřazených skladů a lokací. Lokace mohou být přidány, odebrány nebo upraveny, stejně tak lze aktualizovat stav zóny (aktivní/blokovaná).
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -183,7 +183,7 @@ Editace zóny umožňuje upravit veškeré údaje týkající se zóny, včetně
 
 Tato obrazovka zobrazuje seznam všech skladových lokací. Lokace jsou fyzická místa ve skladech, kam se ukládá zboží, a jejich kódy jsou tisknuty na štítky a čárové kódy.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace.png')">
     <img src="/content/images/ciselniky/lokace.png" alt="Lokace" width="900" />
 </a>
 
@@ -198,7 +198,7 @@ Tato obrazovka zobrazuje seznam všech skladových lokací. Lokace jsou fyzická
 - **Upravit**: Tlačítko pro přechod na obrazovku pro úpravu lokace.
 - **Nová lokace**: Tlačítko v horní části obrazovky slouží k přidání nové skladové lokace.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-editace.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-editace.png')">
     <img src="/content/images/ciselniky/lokace-editace.png" alt="Lokace" width="900" />
 </a>
 
@@ -214,13 +214,13 @@ Tato obrazovka umožňuje editaci parametrů konkrétní skladové lokace (v tom
 - **OK**: Tlačítko pro potvrzení provedených změn.
 
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 <h2 id="detail-lokace">Detail lokace</h2>
 
 Tato obrazovka zobrazuje přehled materiálů, které jsou momentálně uloženy v konkrétní skladové lokaci (např. "01-01-01").
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-edetail.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-edetail.png')">
     <img src="/content/images/ciselniky/lokace-detail.png" alt="Lokace detail" width="900" />
 </a>
 
@@ -249,7 +249,7 @@ Zobrazuje informace o inventurách, které byly provedeny pro tuto lokaci, včet
 
 **Kliknutím na modré texty se lze prokliknout na detail.**
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -266,11 +266,11 @@ Tato obrazovka zobrazuje přehled všech typů skladových lokací. Typ lokace o
 - **Upravit**: Tlačítko pro přechod na obrazovku pro úpravu konkrétního typu lokace.
 - **Nový typ lokace**: Tlačítko v horní části obrazovky slouží k přidání nového typu lokace.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-typy.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-typy.png')">
     <img src="/content/images/ciselniky/lokace-typy.png" alt="Typy lokací" width="900" />
 </a>
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -278,7 +278,7 @@ Tato obrazovka zobrazuje přehled všech typů skladových lokací. Typ lokace o
 
 Tato obrazovka umožňuje úpravu parametrů typu lokace.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-typy-editace.png')">
+<a href="#ciselniky" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/ciselniky/lokace-typy-editace.png')">
     <img src="/content/images/ciselniky/lokace-typy-editace.png" alt="Typy lokací" width="900" />
 </a>
 
@@ -289,4 +289,4 @@ Tato obrazovka umožňuje úpravu parametrů typu lokace.
 - **Equipment type**: Typ vybavení, které je spojeno s tímto typem lokace.
 - **OK**: Tlačítko pro potvrzení změn.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>

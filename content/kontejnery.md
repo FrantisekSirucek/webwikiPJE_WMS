@@ -8,7 +8,7 @@
 
 `http://10.10.30.4:8080/modules/stock-state/containers/`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/stav-skladu/DODELAT.png')">
+<a href="#kontejnery" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/stav-skladu/DODELAT.png')">
    <img src="/content/images/stav-skladu/DODELAT.png" alt="Kontejnery" width="900" />
 </a>
 
@@ -27,7 +27,7 @@ Na této obrazovce je zobrazen seznam všech aktuálních kontejnerů v systému
 
 <h3 id="detail-kontejneru">Detail kontejneru</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/stav-skladu/DODELAT.png')">
+<a href="#kontejnery" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/stav-skladu/DODELAT.png')">
    <img src="/content/images/stav-skladu/DODELAT.png" alt="Detail kontejneru" width="900" />
 </a>
 

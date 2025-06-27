@@ -14,7 +14,7 @@ Po schválení diferencí je stav na lokaci aktualizován v systému a změny js
 
 `http://10.10.30.4:8080/modules/documents/inventory-check/`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/doklady-inventury.png')">
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/doklady-inventury.png')">
    <img src="/content/images/doklady/inventury/doklady-inventury.png" alt="Doklady inventur" width="900" />
 </a>
 
@@ -33,7 +33,7 @@ Jsou zde sloupce:
 
 `http://10.10.30.4:8080/modules/documents/inventory-check/lines`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
    <img src="/content/images/doklady/inventury/inventury-radky.png" alt="Řádky inventárních dokladů" width="900" />
 </a>
 
@@ -100,7 +100,7 @@ Při schvalování pak najdu tento konkrétní řádek, který přijmu. Celý do
 
 `http://10.10.30.4:8080/modules/documents/inventory-check/shortpick`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/short-pick.png')">
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/short-pick.png')">
    <img src="/content/images/doklady/inventury/short-pick.png" alt="Short picky" width="900" />
 </a>
 

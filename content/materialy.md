@@ -17,7 +17,7 @@
 
 Tato obrazovka zobrazuje přehled všech materiálů spravovaných v systému. Každý materiál je detailně popsán několika parametry, které umožňují správu zásob ve skladech.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy.png')">
+<a href="#materialy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy.png')">
     <img src="/content/images/materialy/materialy.png" alt="Detail materiálu" class="img-fluid modal-thumbnail" />
 </a>
 
@@ -36,7 +36,7 @@ Tato obrazovka zobrazuje přehled všech materiálů spravovaných v systému. K
 
 **Možnost filtrace**: Uživatel může filtrovat materiály podle klíčových atributů a efektivně tak spravovat velké množství materiálů v systému.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -44,7 +44,7 @@ Tato obrazovka zobrazuje přehled všech materiálů spravovaných v systému. K
 
 Tato obrazovka zobrazuje detailní informace o vybraném materiálu, rozdělené do několika sekcí pro přehlednost.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy-detail.png')">
+<a href="#materialy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy-detail.png')">
     <img src="/content/images/materialy/materialy-detail.png" alt="Detail materiálu" class="img-fluid modal-thumbnail" />
 </a>
 
@@ -60,7 +60,7 @@ Tato obrazovka zobrazuje detailní informace o vybraném materiálu, rozdělené
 - **Barcodes**: Čárové kódy přidělené materiálu.
 - **Upravit**: Tlačítko pro editaci obecné části vlastností materiálu.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -73,7 +73,7 @@ Zobrazuje logistické vlastnosti materiálu v systému:
 - **Serializováno**: Zda je materiál identifikován sériovým číslem.
 - **Sledování položek na lokaci**: Zda je materiál sledován pomocí SN až na jednotlivé lokace.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -84,7 +84,7 @@ Tato sekce obsahuje specifická pole přizpůsobená pro potřeby firmy:
 - **Detailní popisy materiálu**: Popisy v různých jazycích nebo specifické kódy.
 - **Integrace**: Specifické kódy pro integraci s dalšími systémy. Data jsou synchronizována se systémem SAP.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -95,7 +95,7 @@ Seznam šablon spojených s materiálem, které mohou definovat různé aspekty 
 - **Typ**: Typ šablony (např. "SN").
 - **Šablona**: REGEX kód pro kontrolu správnosti unikátního identifikátoru.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -103,7 +103,7 @@ Seznam šablon spojených s materiálem, které mohou definovat různé aspekty 
 
 Tato obrazovka umožňuje úpravu obecných vlastností konkrétního materiálu.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy-editace.png')">
+<a href="#materialy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy-editace.png')">
     <img src="/content/images/materialy/materialy-editace.png" alt="Logistické vlastnosti materiálu" class="img-fluid modal-thumbnail" />
 </a>
 
@@ -115,7 +115,7 @@ Tato obrazovka umožňuje úpravu obecných vlastností konkrétního materiálu
 - **Note**: Pole pro zadání poznámek k materiálu.
 - **OK**: Tlačítko pro potvrzení a uložení změn.
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
 ---
 
@@ -123,7 +123,7 @@ Tato obrazovka umožňuje úpravu obecných vlastností konkrétního materiálu
 
 Tato obrazovka umožňuje správu a editaci logistických dat materiálu, která jsou klíčová pro skladovou správu a manipulaci s materiálem.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy-geo-data.png')">
+<a href="#materialy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/materialy/materialy-geo-data.png')">
     <img src="/content/images/materialy/materialy-geo-data.png" alt="Logistické vlastnosti materiálu" class="modal-thumbnail" />
 </a>
 
@@ -133,4 +133,4 @@ Tato obrazovka umožňuje správu a editaci logistických dat materiálu, která
 - **Sledování položek na lokaci**: Označuje, zda je materiál sledován na konkrétních lokacích.
 - **Váha netto**: Čistá hmotnost materi
 
-<p><a href="#" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
+<p><a href="#materialy" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
