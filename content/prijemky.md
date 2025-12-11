@@ -11,7 +11,8 @@
     - [Dokončená příjemka](#dokoncena-prijemka)
     - [Import příjemky ze SAP](#import-prijemky-ze-sap)
     - [Založení interní příjemky mimo SAP](#zalozeni-interni-prijemky-mimo-sap)
-2. [Další informace a řešení problémů](#reseni-problemu)
+2. [Proces příjmu dokladu](#proces_dokladu_prijemka)
+3. [Další informace a řešení problémů](#reseni-problemu)
 
 <h2 id="prijem">Příjem</h2>
 
@@ -32,7 +33,7 @@ Příjemka tak hraje zásadní roli při evidenci skladových zásob, sledován�
 
 `http://10.10.30.4:8080/modules/documents/goods-receipt/index`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/images/doklady/prijemky/doklady-prijemky.png" alt="Příjem" width="900" />
 </a>
 
@@ -81,7 +82,7 @@ Ve spodní části obrazovky je možné zvolit, kolik položek se zobrazí na je
 
 `http://10.10.30.4:8080/modules/documents/goods-receipt/store-on-location`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/prijem-joby-radky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/prijem-joby-radky.png')">
    <img src="/content/images/doklady/prijemky/prijem-joby-radky.png" alt="Přehled příjmových jobů" width="900" />
 </a>
 
@@ -104,7 +105,7 @@ Sloupce:
 
 Příjemka, která se teprve bude zpracovávat:
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/prijemky-detail.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/prijemky-detail.png')">
     <img src="/content/images/doklady/prijemky/prijemky-detail.png" alt="Detail příjemky" width="900" />
 </a>
 
@@ -153,11 +154,11 @@ Zobrazuje úkoly spojené s příjmem tohoto materiálu:
 
 <h3 id="dokoncena-prijemka">Dokončená příjemka</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/dokoncena-prijemka.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/dokoncena-prijemka.png')">
    <img src="/content/images/doklady/prijemky/dokoncena-prijemka.png" alt="Dokončená příjemka" width="900" />
 </a>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/dokoncena-prijemka-2.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/dokoncena-prijemka-2.png')">
    <img src="/content/images/doklady/prijemky/dokoncena-prijemka-2.png" alt="Dokončená příjemka detail" width="900" />
 </a>
 
@@ -175,7 +176,7 @@ U dokončené příjemky je zobrazen seznam skladových jobů, které byly zprac
 
 <h3 id="import-prijemky-ze-sap">Import příjemky ze SAP</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/import-prijemky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/import-prijemky.png')">
    <img src="/content/images/doklady/prijemky/import-prijemky.png" alt="Import příjemky ze SAP" width="900" />
 </a>
 
@@ -188,7 +189,7 @@ A kliknu na modré Import. Červené Zrušit mě naopak vrátí zpět na seznam 
 
 <h3 id="zalozeni-interni-prijemky-mimo-sap">Založení interní příjemky mimo SAP</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/zalozeni-interni-prijemky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/zalozeni-interni-prijemky.png')">
    <img src="/content/images/doklady/prijemky/zalozeni-interni-prijemky.png" alt="Založení interní příjemky" width="900" />
 </a>
 
@@ -210,6 +211,22 @@ Interní WMS příjemky by měly být používány výhradně pro příjem mater
 Interní příjemky jsou často využívány pro testování, zpracování neformálního příjmu materiálu nebo pro evidenci materiálu, který není součástí hlavního systému ERP. Případně k doskladnění materiálu, který je v SAP a nelze tedy do SAP přijmout opakovaně
 
 > **Důležité upozornění:** Jakýkoliv pokus o přijetí materiálu, který je zároveň spravován v SAPu, způsobí závažné problémy s datovou konzistencí a správností skladových zásob mezi systémy!
+
+---
+<h2 id="proces_dokladu_prijemka">Proces příjmu v systému</h2>
+
+1. Pomocí čísla dokladu si importuji příjemku
+2. V Modulu Příjem se založí nový doklad RZ a Externím číslem = SAP číslo dokladu
+3. Proces přijmu pak standartně probíhá přes aplikaci Příjem viz Čtečky -> Příjem <a href="#Terminal/T_Prijem">ZDE</a>
+4. Pokud chci provést příjem pomocí lotfile. Tak kliknu na tlačítko <span style="color: #0dcaf0;">Importovat SN</span> a na další obrazovce vyberu soubor s SN a nahraju
+   - ⚠️ soubor musí být ve správném formátu (xlsx), kdy první sloupec je záhlavý a sloupce jsou přesně  v pořadí 
+      - Mat ID (Barcodes);SN;UIID;KS;MasterObal;SAP batch nr;Sarze cislena
+   - nahrávání přes import také kontrolue správnost zadaných dat, jako masky SN, zda existuje Material ID atp a případně zobrazí chybu
+5. V případě, že potřebuji vytisknout příjmový doklad, jdu od detailu příjemky a stisknu tlačítko 📝 **PDF** otevře se mi nová záložka s příjemkou a tu si mohu stáhnout nebo vytisknout
+6. Pokud je doklad špatně zpracován, lze pomocí tlačítka <span style="background-color: red; color: white">Vrátit</span>
+   - ❌ pouze ale pokud už nejsou potvrzené skladové joby na lokace. 
+   - vrácením příjmu se zruší všechny dosud vytvořené skladové joby a odskladní SN v dokladu
+7. V případě, že Příjemku nebudu vůbec zpracovávat tak aby nesvítila mezi nedokončenými přijmy tak použiji tlačítko <span style="background-color: red; color: white">Zrušit</span>
 
 ---
 

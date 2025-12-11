@@ -11,7 +11,7 @@
 
 V hlavním menu čtečky vybereme dlaždici **Příjem**.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_dlazdice.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_dlazdice.png')"> 
     <img src="/content/terminal/images/prijem_dlazdice.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
@@ -32,7 +32,7 @@ Po výběru příjemky je uživatel přesměrován na obrazovku, kde vidí jedno
 - **SN?**: Indikátor, zda produkt vyžaduje sériové číslo.  
 - **UIID?**: Indikátor, zda produkt vyžaduje UIID.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produktyek.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produktyek.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_produkty.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
@@ -42,7 +42,7 @@ Po výběru příjemky je uživatel přesměrován na obrazovku, kde vidí jedno
 
 Pokud je produkt označen jako vyžadující UIID, systém se uživatele zeptá, zda chce UIID přiřadit již při příjmu.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_dotaz_UIID_priradit.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_dotaz_UIID_priradit.png')"> 
     <img src="/content/terminal/images/prijem_dotaz_UIID_priradit.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
@@ -56,7 +56,7 @@ Po potvrzení, že bude přiřazováno UIID, systém vyzve uživatele k načten�
 - **Kód**: Sériové číslo produktu (SN).  
 - **Název**: Popis produktu.  
 - **Hodnota**: Pole pro zadání sériového čísla.
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_SNaUIID.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_SNaUIID.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_SNaUIID.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
@@ -70,7 +70,7 @@ Po načtení SN je uživatel vyzván k zadání UIID pro produkt:
 - **Kód**: Unikátní identifikátor (UIID).  
 - **Název**: Popis produktu.  
 - **Hodnota**: Pole pro zadání UIID.
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_SNaUIID_UIID.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_SNaUIID_UIID.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_SNaUIID_UIID.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
@@ -81,7 +81,7 @@ Pokud během načítání dojde k chybě (např. nesprávný formát sériového
 
 V případě, že materiál **není** evidovaný na SN, tak místo obrazovek na načítání SN (UIID) se zobrazí pouze obrazovka, kam se zadá počet ks k přijetí.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produkty_kusovky.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produkty_kusovky.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_produkty_kusovky.png" alt="Obrazovka na zadání počtu ks" width="900" /> 
 </a>
 
@@ -99,13 +99,13 @@ A nebo celé množství. **Nikdy nejde přijmout víc**, než je na řádku polo
 
 Po dokončení příjmu řádky se zobrazí potvrzovací obrazovka a výzva k načtení tiskárny pro vytištění potvrzovacího lístku. Nebo je zde možnost tisk vynechat.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_dokonceno.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_dokonceno.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_dokonceno.png" alt="Potvrzovací obrazovka" width="900" /> 
 </a>
 
 Následně se vrátím na Příjemku, kde vidím, které řádky jsou **přijaté** a případně **nepřijaté**.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_dokonceno_seznam.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_dokonceno_seznam.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_dokonceno_seznam.png" alt="Zobrazení stavu příjemky" width="900" /> 
 </a>
 
@@ -121,23 +121,23 @@ Kliknutím na **Hotovo** dokončím práci a zobrazí se mi tento dialog. Zde zv
 
 V případě, že chci už při **příjmu** vytvořit kontejner, tak zvolím tlačítko (na obrazovce zadání počtu nebo skenování SN).
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_button.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_button.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_kontejner_button.png" alt="Vytvoření kontejneru" width="900" /> 
 </a>
 
 Následně po mě bude aplikace chtít načíst tiskárnu, aby se vytiskl štítek s ID kontejneru, který se na něj nalepí.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_tisky.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_tisky.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_kontejner_tisky.png" alt="Scan tiskárny" width="900" /> 
 </a>
 
 Po načtení tiskárny se vytiskne štítek a aplikace si vyžádá vložení kusů do kontejneru.  
 Buď **počtem** (produkty bez SN), nebo nascanováním **SN** (plus případně UIID).
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_zadani_kusu.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_zadani_kusu.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_kontejner_zadani_kusu.png" alt="Vložení ks do kontejneru" width="900" /> 
 </a>
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_prijemka.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_kontejner_prijemka.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_kontejner_prijemka.png" alt="Vložení ks do kontejneru" width="900" /> 
 </a>
 
