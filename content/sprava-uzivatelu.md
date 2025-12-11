@@ -13,12 +13,13 @@
   - [Členové skupiny](#clenove-skupiny)
   - [Skupiny](#skupiny)
   - [Přiřazená práva](#prirazena-prava)
+  - [Popis práv](#Popis-prav)
 
 <h2 id="sprava-uzivatelu-prehled">Přehled správy uživatelů</h2>
 
 `http://10.10.30.4:8080/modules/users/`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/seznam-uzivatelu.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/seznam-uzivatelu.png')">
    <img src="/content/images/sprava-uzivatelu/seznam-uzivatelu.png" alt="Seznam uživatelů" width="900" />
 </a>
 
@@ -28,7 +29,7 @@ Skupiny uživatelů se tvoří pro jednodušší přiřazování oprávnění. L
 
 <h2 id="detail-uzivatele">Detail Uživatele</h2>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/detail-uzivatele.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/detail-uzivatele.png')">
    <img src="/content/images/sprava-uzivatelu/detail-uzivatele.png" alt="Detail uživatele" width="900" />
 </a>
 
@@ -41,7 +42,7 @@ Zde je zobrazen název uživatele, uživatelské jméno a stav uživatele (aktiv
 - **Aktivní:** Checkbox určuje, zda je účet aktivní.
 - **Upravit:** Tlačítko pro úpravu uživatelských údajů.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/editace-uzivatele.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/editace-uzivatele.png')">
    <img src="/content/images/sprava-uzivatelu/editace-uzivatele.png" alt="Úprava uživatele" width="900" />
 </a>
 
@@ -73,7 +74,7 @@ Ve spodní tabulce jsou pak vidět všechna práva, které daný uživatel má. 
 
 <h2 id="detail-skupiny">Detail Skupiny</h2>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/detail-skupiny.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/detail-skupiny.png')">
    <img src="/content/images/sprava-uzivatelu/detail-skupiny.png" alt="Detail skupiny" width="900" />
 </a>
 
@@ -85,9 +86,9 @@ Zde jsou zobrazeny informace o skupině:
 - **Název:** Název skupiny (zde "Administrators").
 - **Popis:** Popis skupiny (není uveden).
 - **Aktivní:** Checkbox označuje, zda je skupina aktivní.
-- **Upravit:** Tlačítko pro úpravu základních informací o skupině.
+- **Upravit:** Tlačítko pro úpravu základních informací o skupině. Upravovat lze jen popis skupiny a nebo ji deaktivovat
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/editace-skupiny.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/editace-skupiny.png')">
    <img src="/content/images/sprava-uzivatelu/editace-skupiny.png" alt="Úprava skupiny" width="900" />
 </a>
 
@@ -135,3 +136,56 @@ Seznam všech oprávnění, která jsou přiřazena této skupině:
 
 **Funkčnost:**  
 Tato obrazovka umožňuje správu členů skupiny a jejich oprávnění. Administrátoři mohou přidávat nebo odebírat členy skupiny a také spravovat oprávnění, která jsou této skupině přidělena. Skupiny mohou být také vkládány do jiných skupin, což umožňuje flexibilní správu přístupových práv.
+
+<h3 id="Popis-prav">5. Popis práv</h3>
+
+Seznam všech oprávnění:
+<h4 id="Popis-wms">Popis práv ve WMS</h4>
+
+- **ADMIN** : Udělí práva univerzálně na cokoliv
+- **USERS_AND_ROLES** : právo na modul Uživatelé a role a jejich administraci
+- **CONTAINERS** : práva na modul kontejnery a jejich prohlížení
+- **CUSTOMERS** : práva na modul a správu zákazníků
+- **GOODS_RECEIPT** : práva na modul Příjmy a import příjemky ze SAP
+- **GOODS_RECEIPT_CREATE** : právo vytvořit interní příjemku
+- **GOODS_RECEIPT_MISMATCH** : chybné doklady prohlížení
+- **INVENTORY_CHECK** : práva na inventurní modul a schvalování dokladů
+- **location_types** : práva na modul typy lokací a jejich správu
+- **locations** : práva na modul lokace a jejich správu
+- **MATERIALS** : právo na modul materiály, detail materiálu a jejich editaci
+- **MATERIALS_ITEM_CHANGE_WAREHOUSE** : právo na tvrdou změnu účetního skladu SN/UID v rámci WMS, nefunguje bez předchozího práva na správu materiálů
+- **ORDERS** : právo na modul Objednávky, detail objednávky, import ze SAP, aktivaci
+- **ORDERS_CREATE** : právo na vytvoření interní obejednávky
+- **ORDERS_CREATE_TRANSFER** : právo na vytvoření dokladu na dvoukrokové přeskladnění
+- **ORDERS_DELIVERY2_REFRESH** : právo na refresh Delivery
+- **ORDERS_EXPORT** : právo na ruční export do SAP, pozor je nutné mít také právo na detail jobu **STORE_JOBS**
+- **PLANTS** : právo na moful Plants, fyzické sklady, a jejich editaci
+- **REPLENISH** : právo na modul Replenish a vytváření replenishů
+- **SAP_DOCUMENTS** : právo na modul SAP dokumenty
+- **SAP_ERRORS** : právo na modul Chyby
+- **STOCK_STATE** : právo na modul Stav zásob
+- **STORE_JOBS** : právo na prohlížení modulu skladové joby a detail skladového jobu
+- **STORE_JOBS_CANCEL** : právo na stornování jobu
+- **WAREHOUSES** : právo na modul Účetní sklady a jejich správu
+- **ZONES** : právo na modul Zóny a jejich správu
+
+<h4 id="Popis-apky">Popis práv na Aplikace</h4>
+
+- **MT_CABLE_CUTTING** : aplikace na stříhání kabelů
+- **MT_GOODS_ISSUE** : aplikace na výdej (vyskladněných Order/Delivery)
+- **MT_GOODS_RECEIPT** : aplikace na příjem zboží a inventuru SN
+- **MT_INVENTORY_CHECK** : aplikace na inventury
+- **MT_MULTI_PICK** : aplikace na výdej pomocí multipicku
+- **MT_PACKAGING** : aplikace balení / třízení
+- **MT_PICK** : aplikace na pickování / vyskladnění
+- **MT_PICK_SKIP_SCAN** : umožňuje volbu, že se nebude číst čárový kód u pickování
+- **MT_RESTORAGE** : aplikace přeskladnění mezi lokacemi
+- **MT_RESTORAGE_SAP** : aplikace přeskladnění mezi účetními sklady - jednokrokové přeskladnění i do SAP
+- **MT_STORE_ON_LOCATION** : aplikace potvrzování
+- **MT_REPLENISH** : aplikace na zpracování replensihů
+- **MT_REPLENISH_SKIP_SCAN** : umožňuje volbu, že se nebude číst čárový kód u pickování replenishů
+- **MT_UNIQUE_ITEM_ID** : přířazení/změna UID na materiálu
+- **MT_BARCODE_INFO** : právo na aplikaci BarcodeInfo
+- **MT_DEBUG_BARCODE_DECODER** : rozklíčování barcode (debug apka)
+- **MT_TERMINAL_DEBUG** : debugovací apka 
+

@@ -11,9 +11,9 @@ kontrola
 Get-ExecutionPolicy -Scope CurrentUser
 
 
-inicializace netlify
+inicializace netlify (není potřeba před testováním)
 netlify init
 
 
-spuštění webu
+spuštění webu - nejdřív smazat složku .netlify/functions-internal jinak to spadne chybou
 netlify dev
