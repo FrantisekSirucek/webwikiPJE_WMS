@@ -13,7 +13,7 @@ Sekce systému související se stavem zboží na skladě.
 
 <h2 id="stav-skladu-prehled">Stav skladu</h2>
 
-`http://10.10.30.4:8080/modules/stock-state/`
+`http://10.10.30.4/modules/stock-state/`
 
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/stav-skladu/DODELAT.png')">
    <img src="/content/images/stav-skladu/DODELAT.png" alt="Stav skladu" width="900" />

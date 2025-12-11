@@ -31,7 +31,7 @@ Jsou zde sloupce:
 
 <h3 id="radky-inventarnich-dokladu">Řádky inventárních dokladů</h3>
 
-`http://10.10.30.4:8080/modules/documents/inventory-check/lines`
+`http://10.10.30.4/modules/documents/inventory-check/lines`
 
 <a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
    <img src="/content/images/doklady/inventury/inventury-radky.png" alt="Řádky inventárních dokladů" width="900" />

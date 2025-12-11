@@ -7,7 +7,7 @@
 Warehouse management systém (dále jen WMS) je dostupný na adrese:
 
 ```
-http://10.10.30.4:8080/
+http://10.10.30.4/
 ```
 
 > **Důležité:** Systém je dostupný pouze z interní sítě PJ Expedis sklad výstavby.

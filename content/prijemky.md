@@ -31,7 +31,7 @@ Příjemka tak hraje zásadní roli při evidenci skladových zásob, sledován�
 
 <h3 id="prijemky">Doklady (Příjemky)</h3>
 
-`http://10.10.30.4:8080/modules/documents/goods-receipt/index`
+`http://10.10.30.4/modules/documents/goods-receipt/index`
 
 <a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/doklady-prijemky.png')">
     <img src="/content/images/doklady/prijemky/doklady-prijemky.png" alt="Příjem" width="900" />
@@ -54,7 +54,7 @@ Funkce:
 
 <h3 id="prehled-radky-prijemky">Přehled Řádky příjemky</h3>
 
-`http://10.10.30.4:8080/modules/documents/goods-receipt/lines`
+`http://10.10.30.4/modules/documents/goods-receipt/lines`
 
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/radky-prijemky.png')">
    <img src="/content/images/doklady/prijemky/radky-prijemky.png" alt="Řádky příjemky" width="900" />
@@ -80,7 +80,7 @@ Ve spodní části obrazovky je možné zvolit, kolik položek se zobrazí na je
 
 <h3 id="prehled-prijmovych-jobu">Přehled příjmových jobů</h3>
 
-`http://10.10.30.4:8080/modules/documents/goods-receipt/store-on-location`
+`http://10.10.30.4/modules/documents/goods-receipt/store-on-location`
 
 <a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/prijem-joby-radky.png')">
    <img src="/content/images/doklady/prijemky/prijem-joby-radky.png" alt="Přehled příjmových jobů" width="900" />

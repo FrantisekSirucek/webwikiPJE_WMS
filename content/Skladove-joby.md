@@ -4,7 +4,7 @@ Každý dokument (příjemka, objednávka) má přiřazený job a každá řádk
 
 <h2 id="vsechny-skladove-joby">Všechny skladové joby</h2>
 
-`http://10.10.30.4:8080/modules/store-jobs/`
+`http://10.10.30.4/modules/store-jobs/`
 
 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/skladove-joby/prehled-jobu.png')">
    <img src="/content/images/skladove-joby/prehled-jobu.png" alt="Přehled skladových jobů" width="900" />

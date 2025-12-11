@@ -6,7 +6,7 @@
 
 <h2 id="kontejnery">Kontejnery (Master Obaly)</h2>
 
-`http://10.10.30.4:8080/modules/stock-state/containers/`
+`http://10.10.30.4/modules/stock-state/containers/`
 
 <a href="#kontejnery" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/stav-skladu/DODELAT.png')">
    <img src="/content/images/stav-skladu/DODELAT.png" alt="Kontejnery" width="900" />

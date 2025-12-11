@@ -24,7 +24,7 @@ Ve skladu se proces objednávek řídí jasně definovanými postupy, které zah
 
 **Import objednávek z SAPu:** Všechny objednávky jsou do systému WMS automaticky importovány ze systému SAP. Každá objednávka je reprezentována jako dokument. Každý dokument obsahuje řádky, přičemž každý řádek představuje jednu položku, která má být vychystána.
 
-**Vychystávání zboží (picking):**
+**Vychystávání zboží (picking):**   
 
 Ve skladu existují dvě hlavní metody vychystávání zboží:
 - **Single pick** (Jednoobjednávkové vychystávání): Skladník vychystává zboží pro jednu objednávku najednou. Tento proces je vhodný pro objednávky, které jsou časově citlivé nebo specifické.
@@ -46,9 +46,9 @@ Po dokončení vychystání je stav objednávky odeslán zpět do SAPu, kde je a
 
 <h3 id="dokumenty">Dokumenty</h3>
 
-`http://10.10.30.4:8080/modules/documents/orders/index`
+`http://10.10.30.4/modules/documents/orders/index`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/doklady-objednavky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/doklady-objednavky.png')">
    <img src="/content/images/doklady/objednavky/doklady-objednavky.png" alt="Dokumenty" width="900" />
 </a>
 
@@ -76,7 +76,7 @@ Pomocí tlačítka Importovat ze SAPu lze načítat nové objednávky z ERP syst
 
 <h3 id="import-objednavky">Import objednávky</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/import-objednavky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/import-objednavky.png')">
    <img src="/content/images/doklady/objednavky/import-objednavky.png" alt="Import objednávky" width="900" />
 </a>
 
@@ -110,7 +110,7 @@ Dojde k vytištění skladových výdejek, které obsahují barcode, který se p
 
 **Hromadná aktivace**
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/hromadna-aktivace.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/hromadna-aktivace.png')">
    <img src="/content/images/doklady/objednavky/hromadna-aktivace.png" alt="Hromadná aktivace" width="900" />
 </a>
 
@@ -132,7 +132,7 @@ Po aktivaci jsou objednávky připraveny k vychystání, což znamená, že syst
 
 **Aktivace jedné objednávky tlačítkem**
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/aktivace-tlacitkem.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/aktivace-tlacitkem.png')">
    <img src="/content/images/doklady/objednavky/aktivace-tlacitkem.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -140,7 +140,7 @@ Na detailu objednávky stisknu tlačítko aktivovat
 
 <h3 id="vytvoreni-objednavky">Vytvoření objednávky</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vytvoreni-interni-objednavky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vytvoreni-interni-objednavky.png')">
    <img src="/content/images/doklady/objednavky/vytvoreni-interni-objednavky.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -168,7 +168,7 @@ Stejně jako u ručního vytváření příjemek, i zde platí pravidlo, že **m
 
 `http://10.10.30.4:8080/modules/documents/orders/lines` 
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/objednavky-radky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/objednavky-radky.png')">
    <img src="/content/images/doklady/objednavky/objednavky-radky.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -193,7 +193,7 @@ Tato obrazovka poskytuje detailní přehled jednotlivých řádků objednávek (
 
 <h3 id="detail-objednavky">Detail objednávky</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/detail-objednavky.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/detail-objednavky.png')">
    <img src="/content/images/doklady/objednavky/detail-objednavky.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -202,7 +202,7 @@ Tato obrazovka zobrazuje detailní informace o konkrétní objednávce v systém
 **Tlačítko PDF:**  
 V pravém horním rohu je tlačítko **PDF**, které umožňuje tisknout **skladovou výdejku** pro tuto objednávku. Výdejka obsahuje souhrnné informace o objednávce, které slouží jako doklad o vychystání zboží ze skladu.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
    <img src="/content/images/doklady/objednavky/vydejka-pdf.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -245,13 +245,13 @@ Tato obrazovka poskytuje uživateli přehled o všech důležitých informacích
 
 V případě neaktivované objednávky vypadá horní lišta takto a objednávka lze aktivovat za splnění podmínek k aktivaci. Viz zde
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/aktivace-tlacitkem.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/aktivace-tlacitkem.png')">
    <img src="/content/images/doklady/objednavky/aktivace-tlacitkem.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
 Aktivovaná ale nedokončená objednávka má pak tyto možnosti
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/lista-aktivovana-objednavka.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/lista-aktivovana-objednavka.png')">
    <img src="/content/images/doklady/objednavky/lista-aktivovana-objednavka.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -261,14 +261,14 @@ Aktivovaná ale nedokončená objednávka má pak tyto možnosti
 **Dokončit (Zelené tlačítko):**  
 - Toto tlačítko umožňuje dokončení objednávky. Dokončením se myslí odeslání informací o vychystání zboží zpět do systému SAP. Je možné dokončit objednávku i v případě, že nebyly všechny položky plně uspokojeny (např. nedostatek zásob na skladě). Před samotným dokončením se zobrazí potvrzovací dialog (viz druhý obrázek), kde se uživatel musí rozhodnout, zda skutečně chce objednávku dokončit.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/dialog-dokoncit-objednavku.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/dialog-dokoncit-objednavku.png')">
    <img src="/content/images/doklady/objednavky/dialog-dokoncit-objednavku.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
 **PDF:**
 -	Stisknutím tohoto tlačítka lze vygenerovat a stáhnout skladovou výdejku ve formátu PDF, která obsahuje detailní informace o objednávce, vychystaném zboží, a dalších logistických údajích. Tento dokument může být přiložen k zásilce nebo použit pro interní evidenci.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
    <img src="/content/images/doklady/objednavky/vydejka-pdf.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -277,7 +277,7 @@ Aktivovaná ale nedokončená objednávka má pak tyto možnosti
 
 `http://10.10.30.4:8080/modules/documents/orders/pick-jobs`
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/pick_joby.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/pick_joby.png')">
    <img src="/content/images/doklady/objednavky/pick_joby.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
@@ -302,7 +302,7 @@ Tato obrazovka poskytuje přehled o **pickovacích jobech** (vychystávacích ú
 
 <h3 id="detail-jobu">Detail jobu</h3>
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/job-detail.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/job-detail.png')">
    <img src="/content/images/doklady/objednavky/job-detail.png" alt="Detail jobu" width="900" />
 </a>
 
@@ -333,6 +333,6 @@ Tato část zobrazuje jednotlivé řádky pickovacího jobu. Každý řádek odp
 **Tlačítka:**
 - **PDF:** Toto tlačítko umožňuje stáhnout nebo vytisknout souhrnnou dokumentaci k tomuto jobu ve formátu PDF.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/job-pdf.png')">
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/job-pdf.png')">
    <img src="/content/images/doklady/objednavky/job-pdf.png" alt="Vytvoření objednávky" width="900" />
 </a>

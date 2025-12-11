@@ -17,7 +17,7 @@
 
 <h2 id="sprava-uzivatelu-prehled">Přehled správy uživatelů</h2>
 
-`http://10.10.30.4:8080/modules/users/`
+`http://10.10.30.4/modules/users/`
 
 <a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/sprava-uzivatelu/seznam-uzivatelu.png')">
    <img src="/content/images/sprava-uzivatelu/seznam-uzivatelu.png" alt="Seznam uživatelů" width="900" />

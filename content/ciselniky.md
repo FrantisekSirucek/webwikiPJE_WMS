@@ -16,7 +16,7 @@
 
 <h2 id="ucetni-sklady">Účetní sklady</h2>
 
-[http://10.10.30.4:8080/modules/master-data/warehouses/](http://10.10.30.4:8080/modules/master-data/warehouses/)
+[http://10.10.30.4/modules/master-data/warehouses/](http://10.10.30.4:8080/modules/master-data/warehouses/)
 
 Účetní sklady jsou systémové sklady, na které se ukládá zboží. V rámci tohoto provozu jsou zrcadlem účetních skladů ze systému SAP pro tento provoz.
 
@@ -62,7 +62,7 @@ Obrazovka editace účetního skladu:
 
 <h2 id="fyzicke-sklady">Fyzické sklady</h2>
 
-[http://10.10.30.4:8080/modules/master-data/plants/](http://10.10.30.4:8080/modules/master-data/plants/)
+[http://10.10.30.4/modules/master-data/plants/](http://10.10.30.4:8080/modules/master-data/plants/)
 
 Fyzický sklad představuje konkrétní fyzickou lokalitu, jako je plocha nebo hala, která slouží k uskladnění zboží.
 
@@ -107,7 +107,7 @@ Po kliknutí na název skladu se zobrazí detailní informace o vybraném fyzick
 
 <h2 id="zony">Zóny</h2>
 
-[http://10.10.30.4:8080/modules/master-data/zones/](http://10.10.30.4:8080/modules/master-data/zones/)
+[http://10.10.30.4/modules/master-data/zones/](http://10.10.30.4:8080/modules/master-data/zones/)
 
 Zóny jsou skupiny skladových lokací, které sdílejí společné vlastnosti nastavení.
 
@@ -177,7 +177,7 @@ Editace zóny umožňuje upravit veškeré údaje týkající se zóny, včetně
 
 <h2 id="lokace">Lokace</h2>
 
-[http://10.10.30.4:8080/modules/master-data/locations/](http://10.10.30.4:8080/modules/master-data/locations/)
+[http://10.10.30.4/modules/master-data/locations/](http://10.10.30.4:8080/modules/master-data/locations/)
 
 Tato obrazovka zobrazuje seznam všech skladových lokací. Lokace jsou fyzická místa ve skladech, kam se ukládá zboží, a jejich kódy jsou tisknuty na štítky a čárové kódy.
 
@@ -253,7 +253,7 @@ Zobrazuje informace o inventurách, které byly provedeny pro tuto lokaci, včet
 
 <h2 id="typy-lokaci">Typy lokací</h2>
 
-[http://10.10.30.4:8080/modules/master-data/location_types/](http://10.10.30.4:8080/modules/master-data/location_types/)
+[http://10.10.30.4/modules/master-data/location_types/](http://10.10.30.4:8080/modules/master-data/location_types/)
 
 Tato obrazovka zobrazuje přehled všech typů skladových lokací. Typ lokace označuje vlastnosti, které jsou společné pro určité skupiny skladových lokací.
 
