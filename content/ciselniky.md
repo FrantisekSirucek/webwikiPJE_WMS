@@ -169,7 +169,15 @@ Seznam zón umožňuje přehledně zobrazit a spravovat všechny zóny v systém
 
 Detail zóny poskytuje podrobné informace o konkrétní zóně, včetně skladových lokací, které jsou k ní přiřazeny.
 
+V Okně konfigurace zóny se nastavují tiskárny, kam se pro danou zónu tisknou Výdejky
+
 Editace zóny umožňuje upravit veškeré údaje týkající se zóny, včetně přiřazených skladů a lokací. Lokace mohou být přidány, odebrány nebo upraveny, stejně tak lze aktualizovat stav zóny (aktivní/blokovaná).
+
+### Konfigurace zóny
+Zde se nastavují tiskárny. 
+Pokud není vyplněné nic, tak se používá defaultní tiskárna v kanceláři. 
+Pro tisk na tiskárnu u pracoviště INS se zadá konfigurace PS_PRINTER: 172.16.50.2
+Pro vypnutí tisku například pro potřeby testování se zadá PS_PRINTER: TEST
 
 <p><a href="#ciselniky" class="btn btn-link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Zpět nahoru</a></p>
 
