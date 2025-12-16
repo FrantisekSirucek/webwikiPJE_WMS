@@ -19,6 +19,8 @@
 <h2 id="objednavky">Objednávky</h2>
 
 Ve skladu se proces objednávek řídí jasně definovanými postupy, které zahrnují příjem objednávek ze systému SAP, vychystávání (picking) zboží pomocí mobilních terminálů a zpětnou komunikaci vychystaného zboží zpět do SAPu.
+Objednávkou se rozumí doklad importovaná ze SAP. Buď CS Order a nebo Delivery. 
+Zpět do SAP se ale exportují nikoliv celé doklady ale jenotlivé joby. Job = práce ve skladu na dokladu. V ideálním případě 1 doklad = 1 job. V praxi ale může dojít k rozpadu jednoho dokladu na více jobů. (nelze u Delivery, ta nejde útovat na vícekrát). K rozpadu jobů může dojít například, pokud je zboží ve více zónách nebo doklad obsahuje zboží z více účetních skladů v různých zónách. Případně při aktivaci dodatečných jobl, kdy při první aktivaci nebylo vše dostupné a doklad se dovychystává později. (Opět nelze u Delivery. Tam se v takovém případě zaúčtuje doklad nekompletní a na zbytek položek se v SAP vytváří nová Delivery)
 
 <h3 id="prubeh-procesu-objednavek">Průběh procesu objednávek</h3>
 
@@ -67,6 +69,7 @@ Sloupce:
 - **Importovat ze SAPu:** Tlačítko pro manuální import nových objednávek ze SAPu.
 - **Vytvořit:** Tlačítko pro manuální vytvoření nové objednávky přímo v systému WMS, pokud je to potřeba.
 - **Aktivovat aktivovatelné objednávky:** Tlačítko pro hromadnou aktivaci všech objednávek, které jsou připraveny k aktivaci (objednávky, které mají zelený indikátor v kolonce „Aktivovatelné?").
+- **Vytvořit převod:** Slouží k vytvoření dokladu pro dvoukrokové přeskladnění mezi účetními sklady. Má samostatný návod.  
 
 **Funkčnost:**  
 Tato obrazovka slouží k přehledné správě všech objednávek ve skladu. Uživatel zde může sledovat stav jednotlivých objednávek, ověřovat, kdy byly vytvořeny, zda jsou aktivní a zda již byly dokončeny.
@@ -199,13 +202,6 @@ Tato obrazovka poskytuje detailní přehled jednotlivých řádků objednávek (
 
 Tato obrazovka zobrazuje detailní informace o konkrétní objednávce v systému WMS. V tomto případě se jedná o dokončenou objednávku, jejíž stav je plně zpracován a veškeré položky byly vychystány a odeslány.
 
-**Tlačítko PDF:**  
-V pravém horním rohu je tlačítko **PDF**, které umožňuje tisknout **skladovou výdejku** pro tuto objednávku. Výdejka obsahuje souhrnné informace o objednávce, které slouží jako doklad o vychystání zboží ze skladu.
-
-<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
-   <img src="/content/images/doklady/objednavky/vydejka-pdf.png" alt="Vytvoření objednávky" width="900" />
-</a>
-
 **Obecné vlastnosti:**
 - **Kód:** Unikátní identifikátor objednávky (např. "OZ00000328").
 - **Externí kód:** Externí číslo objednávky přiřazené systémem SAP (např. "7000246921").
@@ -240,13 +236,17 @@ Tato sekce ukazuje, jaké skladové joby byly v rámci objednávky vytvořeny a 
 - **Dokončil:** Jméno pracovníka, který job dokončil (např. "Jana Kreckova").
 - **Zrušeno a Zrušil:** Informace o případném zrušení jobu, pokud by k tomu došlo.
 
+**SAP Doklady:** 
+
+Zde se zobrazují SAP doklady. A zprávy k nim. Lze se tedy dostat k surovým datům, které poslal k daným MD systém SAP. V případě, že nastane nějaká chyba je vedle ještě okno SAP Chyby a zde je debug raw kod k chybám, které vrátil SAP do WMS pro hledání příčin. 
+
 **Význam obrazovky:**  
 Tato obrazovka poskytuje uživateli přehled o všech důležitých informacích týkajících se konkrétní objednávky. Je užitečná zejména pro kontrolu stavu objednávky, potvrzení, že všechny položky byly vychystány a odeslány, a pro následné vygenerování výdejky ve formě PDF, která může být přiložena k fyzickému zboží při expedici.
 
 V případě neaktivované objednávky vypadá horní lišta takto a objednávka lze aktivovat za splnění podmínek k aktivaci. Viz zde
 
 <a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/aktivace-tlacitkem.png')">
-   <img src="/content/images/doklady/objednavky/aktivace-tlacitkem.png" alt="Vytvoření objednávky" width="900" />
+   <img src="/content/images/doklady/objednavky/lista-neaktivni-objednavka.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
 Aktivovaná ale nedokončená objednávka má pak tyto možnosti
@@ -258,6 +258,10 @@ Aktivovaná ale nedokončená objednávka má pak tyto možnosti
 **Zrušit (Červené tlačítko):**  
 - Toto tlačítko umožňuje zrušit celou objednávku. Po jeho stisknutí nebude objednávka dále zpracovávána, a tím pádem se žádná data neodešlou do systému SAP. Toto tlačítko by mělo být používáno opatrně, protože zrušená objednávka nelze znovu aktivovat.
 
+**Vynutit dokončení (Červené):**
+- Tlačítko vyditelné jen s příslušným oprávněním. Přepne doklad do stavu dokončeno i když standartní dokončení končí chybou a zrušení již není možné z důvodu vypickovaných jobů
+<span style="color: red;">❗ Zboží z takto dokončené objednávky zůstává vyskladněné z WMS ale nedošlo k vyskladnění v SAP. Je tedy potřeba zásoby srovnat. Buď dovyskladněním v SAPu nebo přijetím zboží zpět do WMS přes inventuru nebo interní příjemku</span>
+
 **Dokončit (Zelené tlačítko):**  
 - Toto tlačítko umožňuje dokončení objednávky. Dokončením se myslí odeslání informací o vychystání zboží zpět do systému SAP. Je možné dokončit objednávku i v případě, že nebyly všechny položky plně uspokojeny (např. nedostatek zásob na skladě). Před samotným dokončením se zobrazí potvrzovací dialog (viz druhý obrázek), kde se uživatel musí rozhodnout, zda skutečně chce objednávku dokončit.
 
@@ -265,12 +269,10 @@ Aktivovaná ale nedokončená objednávka má pak tyto možnosti
    <img src="/content/images/doklady/objednavky/dialog-dokoncit-objednavku.png" alt="Vytvoření objednávky" width="900" />
 </a>
 
-**PDF:**
--	Stisknutím tohoto tlačítka lze vygenerovat a stáhnout skladovou výdejku ve formátu PDF, která obsahuje detailní informace o objednávce, vychystaném zboží, a dalších logistických údajích. Tento dokument může být přiložen k zásilce nebo použit pro interní evidenci.
+**Aktivovat dodatečné joby (Zelené)**
+- Slouží k vytvoření jobů na položky, které při první aktivaci nebyly skladem. Tlačítko tedy vygeneruje nový job/y na položky, které lze pickovat ale při první aktivaci nešly a nejsou tedy součástí původních jobů
 
-<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
-   <img src="/content/images/doklady/objednavky/vydejka-pdf.png" alt="Vytvoření objednávky" width="900" />
-</a>
+
 
 
 <h3 id="pick-joby">Pick Joby</h3>
@@ -331,8 +333,18 @@ Tato část zobrazuje jednotlivé řádky pickovacího jobu. Každý řádek odp
 - **Dokončeno:** Počet kusů, které byly skutečně vychystány (zde 0, protože job zatím nebyl dokončen).
 
 **Tlačítka:**
-- **PDF:** Toto tlačítko umožňuje stáhnout nebo vytisknout souhrnnou dokumentaci k tomuto jobu ve formátu PDF.
+- **Přípravené PDF:** Vytiskne A4 formát skladové výdejky ve formátu PDF.
 
 <a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/job-pdf.png')">
    <img src="/content/images/doklady/objednavky/job-pdf.png" alt="Vytvoření objednávky" width="900" />
 </a>
+
+**PDF Výdejka:**
+-	Stisknutím tohoto tlačítka lze vygenerovat a stáhnout skladovou výdejku ve formátu PDF, která obsahuje detailní informace o objednávce, vychystaném zboží, a dalších logistických údajích. Tento dokument může být přiložen k zásilce nebo použit pro interní evidenci.
+
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/objednavky/vydejka-pdf.png')">
+   <img src="/content/images/doklady/objednavky/vydejka-pdf.png" alt="Vytvoření objednávky" width="900" />
+</a>
+
+**Exportovat do SAP**
+- je viditelné pouze u jobů, kde ještě nedošlo k exportování do SAP. Tlačítko odešle do SAP data materiálového dokladu a dokončí job. Obvykle se děje automaticky po načtení výdejové lokace. Toto slouží k řešení chyb, kdy na první pokus odeslání spadlo nebo se z jiného důvodu nepovedlo. 
