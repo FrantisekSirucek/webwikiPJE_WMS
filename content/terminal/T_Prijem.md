@@ -2,10 +2,11 @@
 
 ## Obsah sekce "Příjem"
 1. [Příjem produktu na SN (+ UIID)](#prijem-produktu-na-sn--uiid)  
-2. [Příjem položky bez SN (UIID)](#prijem-polozky-bez-sn-uiid)  
-3. [Dokončení příjmu](#dokonceni-prijmu)  
-4. [Vytváření kontejnerů (Master Obalů)](#vytvareni-kontejneru-master-obalu)
-5. [Řešení problémů](#reseni-problemu) 
+2. [Příjem položky bez SN (UIID)](#prijem-polozky-bez-sn-uiid) 
+3. [Příjem kabelů (INS)](#prijem-ins) 
+4. [Dokončení příjmu](#dokonceni-prijmu)  
+5. [Vytváření kontejnerů (Master Obalů)](#vytvareni-kontejneru-master-obalu)
+6. [Řešení problémů](#reseni-problemu) 
 
 ---
 
@@ -24,18 +25,11 @@ Po zvolení dlaždice **Příjem** na hlavní obrazovce aplikace se uživatel do
     <img src="/content/terminal/images/prijem_seznam_prijemek.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
-Po výběru příjemky je uživatel přesměrován na obrazovku, kde vidí jednotlivé řádky příjemky. Zde nascanuje nebo vybere produkt, který bude přijímat.
+Po výběru příjemky je uživatel přesměrován na obrazovku, kde zvolí na kterou tiskárnu se budou tisknout potvrzovací lístky a lístky k šaržím (Formát "!"malá Zebra"). Výběr proběhne buď zadání posledních 3 čísel IP adresy nebo kliknutím na přislušnou IP v seznamu
 
-- **Materiál**: Kód a popis přijímaného materiálu.  
-- **Q**: Množství přijímaného zboží.  
-- **CQ**: Počet zboží z kontrolní kvality.  
-- **SN?**: Indikátor, zda produkt vyžaduje sériové číslo.  
-- **UIID?**: Indikátor, zda produkt vyžaduje UIID.
-
-<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produktyek.png')"> 
-    <img src="/content/terminal/images/prijem_prijemka_produkty.png" alt="Hlavní menu aplikace" width="900" /> 
+<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_seznam_prijemek.png')"> 
+    <img src="/content/terminal/images/prijem_vyber_tiskarnu.png" alt="Výběr tiskárny" width="900" /> 
 </a>
-
 ---
 
 <h3 id="prijem-produktu-na-sn--uiid">Příjem produktu na SN (+ UIID)</h3>
@@ -95,13 +89,37 @@ A nebo celé množství. **Nikdy nejde přijmout víc**, než je na řádku polo
 
 ---
 
-<h3 id="dokonceni-prijmu">Dokončení příjmu</h3>
+<h3 id="prijem-ins">Příjem kabelů</h3>
 
-Po dokončení příjmu řádky se zobrazí potvrzovací obrazovka a výzva k načtení tiskárny pro vytištění potvrzovacího lístku. Nebo je zde možnost tisk vynechat.
+V případě, že materiál je evidován s příznakem MCFE (podle SAP) jedná se o kabely, které se přijímají na metry a obvykle na bubny. Takovým materiálům se eviduje sarže, kterou se v tomto případě rozumí obvykle jeden buben(špulka). Generování šarží má na starosti SAP (při přijmu probíhá komunikace mezi WMS a SAP). Logika generování je N + průměr bubnu + pořadové číslo šarže doplněné o 0 do délky 10 znaků například N090000036 = buben u průměru 90cm a pořadové číslo 36.
+V případě, že jde o šarži, která není namotaná na bubnu je logika délka + M + . + pořadové číslo   5000M.0001
 
-<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_dokonceno.png')"> 
-    <img src="/content/terminal/images/prijem_prijemka_dokonceno.png" alt="Potvrzovací obrazovka" width="900" /> 
+Následně se zobrazí obrazovka, kde vidí jednotlivé řádky příjemky. Zde nascanuje nebo vybere produkt, který bude přijímat.
+
+- **Materiál**: Kód a popis přijímaného materiálu.  
+- **Q**: Množství přijímaného zboží.  
+- **CQ**: Počet zboží z kontrolní kvality.  
+- **SN?**: Indikátor, zda produkt vyžaduje sériové číslo.  
+- **UIID?**: Indikátor, zda produkt vyžaduje UIID.
+
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produktyek.png')"> 
+    <img src="/content/terminal/images/prijem_prijemka_produkty.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
+
+Aplikace vyzve k zadání počtu **metrů** které se přijímají na jednom bubnu. Pokud mám bubnů víc tak příjem opakuji pro každý buben zvlášť
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produktyek.png')"> 
+    <img src="/content/terminal/images/prijem_zadat_metry.png" alt="Zadání metrů" width="900" /> 
+</a>
+
+Následně je uživatel vyzván aby zadal průměr bubnu nebo zda jde o příjem volných metrů.
+
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produktyek.png')"> 
+    <img src="/content/terminal/images/prijem_prumer_bubnu.png" alt="Zadání bubnu" width="900" /> 
+</a>
+
+---
+
+<h3 id="dokonceni-prijmu">Dokončení příjmu</h3>
 
 Následně se vrátím na Příjemku, kde vidím, které řádky jsou **přijaté** a případně **nepřijaté**.
 
