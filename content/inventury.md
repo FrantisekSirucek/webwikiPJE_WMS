@@ -95,6 +95,20 @@ Pokud dělám inventuru z důvodu, že potřebuji upravit konkértní produkt (d
 Při schvalování pak najdu tento konkrétní řádek, který přijmu. Celý doklad pak ale odmítnu, protože ostatní neinventarizované produkty na lokaci budou mít záporné diference. 
 
 
+<h4>Export do SAP<h4>
+Pro účely roční invetnury v SAP je potřeba umět vyexportovat nascanovaná seriová čísla v požadovaném formátu. 
+Jde to dvěmi způsboy. Přes Hromadný export v hlavním modulu. 
+Kde následně zadám datum a WMS vytvoří excelový soubor pro SAP, kde budou všechna ten den nascanovaná SN
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
+   <img src="/content/images/doklady/inventury/doklady-inventury-hromadny-export.png" alt="Řádky inventárních dokladů" width="900" />
+</a>
+
+Druhá možnost je exportovat jen SN z konrétního inventárního dokladu. Pokud je doklad vytvořen přes dlaždici Inventura SN tak obsahuje tlačítko Export. To vytvoří excel s SN jen z  daného dokladu.
+
+<a href="#inventury" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/inventury/inventury-radky.png')">
+   <img src="/content/images/doklady/inventury/inventura_detail_dokladuSN.png" alt="Řádky inventárních dokladů" width="900" />
+</a>
+
 
 <h2 id="short-picky">Short picky</h2>
 
