@@ -53,7 +53,7 @@ Obsahuje detailnější informace o pohybu. Jako je případně kontejner nebo �
 </a>
 
 
-<h2 id="replenish">Proces replenishmentu</h2>
+<h2 id="proces_replenishmentu">Proces replenishmentu</h2>
 Odpovědná osoba jednou za den nechá vygenerovat replenish joby.
 Dojde tak ke kontrole, zda je potřeba doplnit na nějaké lokace zásbou aby další dny nestál pick, kvůli nedostatečné zásobě na pick lokacích.
 Skladník pak vezme čtečku a spustí dlaždici replenish
