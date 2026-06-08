@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
     // Zde můžete přidávat další uživatele do seznamu
     const users = [
         { username: 'PJExpediswiki', password: 'chcisetonaucit' },
-        { username: 'externi_pristup', password: 'chciznatjakFungujeWMS' },
+        { username: 'ExterniPristup', password: 'chciznatjakFungujeWMS' },
         // Příklad dalšího uživatele: odkomentujte a upravte podle potřeby
         // { username: 'novy_uzivatel', password: 'tajuplneheslo123' }
     ];
