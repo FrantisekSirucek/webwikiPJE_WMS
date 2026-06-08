@@ -150,7 +150,13 @@ Zobrazuje úkoly spojené s příjmem tohoto materiálu:
 - **Dokončeno:** Datum a čas dokončení jobu (zatím nevyplněno, protože příjem ještě neproběhl).
 - **Zrušeno:** Datum a čas zrušení jobu, pokud byl job zrušen.
 
+<h3 id="rozpracovana-prijemka">Rozpracovaná příjemka</h3>
+Pokud je příjemka naskladněná ale není finálně dokončená - nejsou odeslána data do SAP - lze příjem vrátit a to jak celou příjemku nebo jen na konkrétním řádku. Vrácení dojde k vyskladnění všechn naskladněných kusů a SN. A ke stornování zaskladňovacích jobů.
+Vrátit jdou pouze řádky, jejichž joby nejsou dokončené. Tedy nedošlo k potvrzení zboží na lokaci. Pokud už je zboží potvrzené na lokaci. Musí se vyskladnit výdejem nebo inventurou.
 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/images/doklady/prijemky/dokoncena-prijemka.png')">
+   <img src="/content/images/doklady/prijemky/rozpracovana-prijemka.png" alt="Dokončená příjemka" width="900" />
+</a>
 
 <h3 id="dokoncena-prijemka">Dokončená příjemka</h3>
 
@@ -167,6 +173,7 @@ Rozdíly mezi dokončenou a nedokončenou příjemkou:
 1. **Obecné vlastnosti**
 - **Dokončeno:** U dokončené příjemky je vyplněn datum a čas, kdy byl proces příjmu zboží dokončen (např. "2024-10-03 19:09:37"). Tento údaj v předchozí nezpracované příjemce nebyl přítomen.
 - **Dokončil:** Jméno uživatele, který příjemku dokončil (např. "Jana Kreckova"). V nezpracované příjemce nebyl tento údaj uveden.
+- **Akce:** Jediná akce, kterou lze s dokončenou příjemkou provést je dotisk skladové příjemky přes tlačítko PDF
 
 2. **Řádky**
 - **Obdrženo:** U dokončené příjemky je v poli "Obdrženo" zaznamenáno množství skutečně přijatého zboží (např. 5 kusů, 100 kusů, atd.). U nezpracované příjemky bylo toto pole prázdné nebo mělo hodnotu 0, což znamenalo, že zboží ještě nebylo přijato.
