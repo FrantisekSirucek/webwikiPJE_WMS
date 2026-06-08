@@ -10,10 +10,17 @@ exports.handler = async (event, context) => {
 
     const { username, password } = JSON.parse(event.body);
 
-    const validUsername = 'PJExpediswiki';
-    const validPassword = 'chcisetonaucit';
+    // Zde můžete přidávat další uživatele do seznamu
+    const users = [
+        { username: 'PJExpediswiki', password: 'chcisetonaucit' },
+        { username: 'externi_pristup', password: 'chciznatjakFungujeWMS' },
+        // Příklad dalšího uživatele: odkomentujte a upravte podle potřeby
+        // { username: 'novy_uzivatel', password: 'tajuplneheslo123' }
+    ];
 
-    if (username === validUsername && password === validPassword) {
+    const validUser = users.find(u => u.username === username && u.password === password);
+
+    if (validUser) {
         const token = jwt.sign(
             { username },
             'PJExpedisWMS2024', // Tajný klíč
