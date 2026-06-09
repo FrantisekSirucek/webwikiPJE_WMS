@@ -21,13 +21,13 @@ Po zvolení dlaždice **Příjem** na hlavní obrazovce aplikace se uživatel do
 - **Kód**: Unikátní identifikátor příjemky.  
 - **Doklad**: Číslo dokladu spojeného s příjemkou.
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_seznam_prijemek.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_seznam_prijemek.png')"> 
     <img src="/content/terminal/images/prijem_seznam_prijemek.png" alt="Hlavní menu aplikace" width="900" /> 
 </a>
 
 Po výběru příjemky je uživatel přesměrován na obrazovku, kde zvolí na kterou tiskárnu se budou tisknout potvrzovací lístky a lístky k šaržím (Formát "!"malá Zebra"). Výběr proběhne buď zadání posledních 3 čísel IP adresy nebo kliknutím na přislušnou IP v seznamu
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_seznam_prijemek.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_seznam_prijemek.png')"> 
     <img src="/content/terminal/images/prijem_vyber_tiskarnu.png" alt="Výběr tiskárny" width="900" /> 
 </a>
 
@@ -94,7 +94,7 @@ V případě, že materiál **není** evidovaný na SN, tak místo obrazovek na 
 
 Lze přijmout část množství, poté příjemka vypadá následovně:
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produkty_kusovky_castecny.png')"> 
+<a href="" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('/content/terminal/images/prijem_prijemka_produkty_kusovky_castecny.png')"> 
     <img src="/content/terminal/images/prijem_prijemka_produkty_kusovky_castecny.png" alt="Příjemka po částečném příjmu" width="900" /> 
 </a>
 
